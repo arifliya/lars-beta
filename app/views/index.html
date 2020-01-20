@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Learner aims reference service
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <br>
+    <br>
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+    <table class="govuk-table">
+ <caption class="govuk-table__caption visually-hidden">List of versions</caption>
+ <thead class="govuk-table__head">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="col">Version</th>
+   <th class="govuk-table__header" scope="col">Updates</th>
+     <th class="govuk-table__header" scope="col" colspan="2">Contents</th>
+   </tr>
+ </thead>
+ <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">Carrot 2.0.0<p>20/01/2020</p></th>
+        <td class="govuk-table__cell ">
+          <p>Beta 20/01/2020</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li> New version for Beta </li>
+          </ul>
+        </td>
+        <td class="govuk-table__cell "><a href="2-0-0/start-search.html">Start now</a></td>
+      </tr>
+
+      
+
+ </tbody>
+</table>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,172 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+@import "components/search-box";
+@import "components/filters";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.white-text {
+    color: govuk-colour("white");
+}
+
+#resultsContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#resultList {
+
+    li {
+        margin-bottom: 50px;
+    }
+
+    .no-underline {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+
+
+#resultList ul.custom {
+    li {
+        margin-bottom: 0px;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1
+}
+
+.flex-09 {
+    flex: 0.9;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+.colour-black {
+    color: black;
+}
+
+.results-number-container {
+    background-color: #f8f8f8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+}
+
+
+.results-elements {
+    color: black !important;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 6px;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #f8f8f8;
+
+    &:visited {
+        color: black;
+    }
+
+    .close {
+        position: absolute;
+        
+    }
+
+    .close:before, .close:after {
+        position: absolute;
+        left: -15px;
+        top: 2px;
+        content: ' ';
+        height: 17px;
+        width: 2px;
+        background-color: #333;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+}
+
+.filter-feedback-container {
+    @extend .results-number-container;
+    display: none;
+}
+
+.filter-feedback {
+    @extend .results-elements;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.visually-hidden, .visually-hidden2, .visually-hidden3  {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.custom-width-280 {
+    width: 280px;
+}
+
+.aims-list {
+    span {
+        margin-bottom: 10px;
+    }
+
+    margin-bottom: 0;
+}
+
+@include govuk-media-query($from: tablet) {
+    .flex {
+        flex-direction: row;
+    }
+
+    #resultsContainer {
+        margin-top: 0;
+    }
+}

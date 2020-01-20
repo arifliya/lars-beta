@@ -1,0 +1,107 @@
+.filter-section {
+
+  border-bottom: 1px solid govuk-colour("mid-grey");
+  padding: 15px;
+  padding-left: 0;
+
+  .filter-box-button {
+    padding-left: 15px;
+    padding-bottom: 5px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .selected-text {
+    margin-left: 35px;
+    margin-top: -4px;
+    margin-bottom: 0;
+    display: block;
+    display: none;
+  }
+
+  .govuk-checkboxes__item {
+    margin-left: 15px;
+  }
+
+  .filter-box-button {
+    display: flex;
+  }
+
+  .filter-box-button:before {
+    content: "";
+    box-sizing: border-box;
+    height: 12px;
+    width: 12px;
+    margin-top: 4px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    margin-right: 10px;
+    transform: rotate(45deg);
+  }
+
+  .filter-box-button.rotate:before {
+    margin-top: 9px;
+    transform: rotate(225deg);
+  }
+
+  .filter-box {
+
+    .input-container {
+      margin-left: 15px;
+      margin-top: 10px;
+      width: 90%;
+      // padding-bottom: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: white;
+      // display: none;
+
+      input {
+        padding-left: 35px;
+      }
+
+      .search-icon {
+        svg {
+          position: absolute;
+          width: 20px;
+          padding: 10px;
+          left: 0px;
+          display: block;
+          height: auto;
+        }
+      }
+    }
+
+    .govuk-form-group {
+      position: relative;
+      max-height: 200px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: #ffffff;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    
+  }
+
+  .filter-box.hidden {
+    display: none;
+  }
+
+}
+
+
