@@ -18,6 +18,21 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/filters";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+    /*overwrite style*/
+
+
+    .govuk-width-container-full {
+    max-width: 100%;
+   }
+   @media (min-width: 1020px) {
+    .govuk-width-container-full {
+      margin: 0 30px;
+    }
+   }
+
+
+
 .white-text {
     color: govuk-colour("white");
 }
@@ -32,6 +47,10 @@ $govuk-assets-path: '/govuk/assets/';
 
     li {
         margin-bottom: 50px;
+
+        ul.funding-stream-list li {
+            margin-bottom: 5px;
+        }
     }
 
     .no-underline {
@@ -49,7 +68,7 @@ $govuk-assets-path: '/govuk/assets/';
 #resultList ul.custom {
     li {
         margin-bottom: 0px;
-    }
+    }   
 }
 
 .flex {

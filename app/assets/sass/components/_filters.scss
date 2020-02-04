@@ -105,3 +105,12 @@
 }
 
 
+#custom-box {
+  // margin-left: 12px;
+  max-height: fit-content;
+
+  .govuk-fieldset {
+    margin-left: 12px;
+  }
+  
+}
