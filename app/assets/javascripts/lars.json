@@ -5,7 +5,9 @@ var data = `[
         "LearnAimRef": "00239676",
         "AwardOrgCode": "NONE",
         "NotionalNVQLevelDesc": "Level not applicable\/ Not known",
-        "LastNewStartDate": "2019-01-03"
+        "LastNewStartYear": "2019",
+        "LastNewStartMonth": "01",
+        "LastNewStartDay": "03"
     },
     {
         "LearnAimRefTitle": "Certificate in Education - Lifelong Learning Sector (Mathematics and Numeracy)",

@@ -687,3 +687,10 @@ $('#date-after-year').keyup(function(){
     $("#listCount").text('There are no ');
   }
 });
+
+
+$('#academic-year').on('change',function(){
+  var optionText = $("#academic-year option:selected").text();
+  // alert("Selected Option Text: "+optionText);
+  $(".academic-year-container").text(optionText);
+});

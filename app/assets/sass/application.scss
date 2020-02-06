@@ -21,11 +21,15 @@ $govuk-assets-path: '/govuk/assets/';
 
     /*overwrite style*/
 
-
+// .blue-background {
+//     background-color: $govuk-brand-colour;
+// }
+    
     .govuk-width-container-full {
-    max-width: 100%;
-   }
+        max-width: 100%;
+    }
    @media (min-width: 1020px) {
+    
     .govuk-width-container-full {
       margin: 0 30px;
     }
@@ -48,9 +52,12 @@ $govuk-assets-path: '/govuk/assets/';
     li {
         margin-bottom: 50px;
 
-        ul.funding-stream-list li {
-            margin-bottom: 5px;
-        }
+        
+
+            .funding-stream-list span {
+                margin-bottom: 5px;
+            }
+        
     }
 
     .no-underline {

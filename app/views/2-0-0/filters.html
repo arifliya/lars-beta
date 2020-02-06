@@ -394,7 +394,7 @@
   <section id="teachingYear" class="filter-section">
     <h2 class="filter-box-button govuk-!-font-weight-regular">
       <a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19">
-        Teaching year
+        Academic year
       </a>
     </h2>
     <span class="selected-text govuk-body govuk-!-font-size-16"> <span class="counter">1</span> selected</span>
@@ -402,8 +402,8 @@
       {% from "govuk/components/select/macro.njk" import govukSelect %}
 
       {{ govukSelect({
-        id: "sort",
-        name: "sort",
+        id: "academic-year",
+        name: "academic-year",
         
         items: [
           {
