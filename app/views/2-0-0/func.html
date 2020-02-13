@@ -11,7 +11,7 @@
     for(var i=0;i<mydata.length;i++) {
       const node =
             `<li data-category="${mydata[i].AwardOrgCode} ${mydata[i].NotionalNVQLevelDesc} 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer">
-                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">${mydata[i].LearnAimRefTitle}</a></h3>
+                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">${mydata[i].LearnAimRefTitle}</a></h3>
                   <div class="flex space-between">
                     <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
                       <span><strong>Reference:</strong> ${mydata[i].LearnAimRef}</span>
@@ -28,19 +28,17 @@
                       <span> 16 to 19</span>
                       <span>Adult skills</span>
                       <span>Advanced learner loans</span>
-                      <span>Other</span>
+                      
                     </div> 
                     <div class="flex-col funding-stream-list">
+                      <span>Other</span>
                       <span>Apprenticeships</span>
                       <span>Community learning</span>
-                      <span>EFA-Funding-condition-english</span>
-                      <span>EFA-Funding-condition-maths</span>
+                      
                     </div>
                     <div class="flex-col funding-stream-list">
                       <span>European-social-fund</span>
-                      <span>EFA-Funding-condition-english</span>
                       <span>OLASS</span>
-                      <span>Unemployed-offer</span>
                     </div>
                   </div>
                   <span class="govuk-body govuk-!-font-size-16">
@@ -48,12 +46,10 @@
                         <span>
                           <strong>Last date for new start:</strong> 
                           <span class="last-date-for-new"> 
-                            <span class="year">${mydata[i].LastNewStartYear}</span>-<span class="month">${mydata[i].LastNewStartMonth}</span>-<span class="day">${mydata[i].LastNewStartDay}</span>
-                            </span>
+                            <span class="day">${mydata[i].LastNewStartDay}</span>-<span class="month">${mydata[i].LastNewStartMonth}</span>-<span class="year">${mydata[i].LastNewStartYear}</span>
                           </span>
-                        </span> 
-                
-                    
+                        </span>
+                      </span> 
                   </span>
               </li>`;
       ul.insertAdjacentHTML('beforeend', node);

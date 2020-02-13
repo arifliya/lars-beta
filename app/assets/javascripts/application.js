@@ -48,6 +48,19 @@ $("#searchProviders").click(function() {
   }
 });
 
+$('.autocomplete__menu').click(function(){
+  $("#searchProviders").trigger("click");
+});
+
+
+$('#autocomplete-overlay').keypress(function (e) {
+  var key = e.which;
+  if(key == 13)  // the enter key code
+   {
+     $('#searchProviders]').trigger('click');
+     return false;  
+   }
+ });
 
 // expand filters //
 $('.filter-box-button').click(function(e){
@@ -690,6 +703,16 @@ $('#date-after-year').keyup(function(){
 
 
 $('#academic-year').on('change',function(){
+
+  $('.loading-spinner').show();
+
+  setTimeout(
+    function() { 
+  
+      $('.loading-spinner').hide();
+  
+  }, 500);
+
   var optionText = $("#academic-year option:selected").text();
   // alert("Selected Option Text: "+optionText);
   $(".academic-year-container").text(optionText);

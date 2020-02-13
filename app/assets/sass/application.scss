@@ -78,9 +78,14 @@ $govuk-assets-path: '/govuk/assets/';
     }   
 }
 
+// FOR MOBILE AND DESKTOP // 
 .flex {
     display: flex;
-    flex-direction: column
+    // flex-direction: column
+}
+
+.flex-mob {
+    display: flex
 }
 
 .flex-col {
@@ -194,5 +199,12 @@ $govuk-assets-path: '/govuk/assets/';
 
     #resultsContainer {
         margin-top: 0;
+    }
+}
+
+
+.fc-body-list {
+    .fc-body-list-item {
+        margin-bottom: 10px;
     }
 }

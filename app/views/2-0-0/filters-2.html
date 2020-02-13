@@ -366,14 +366,6 @@
               text: "Community learning"
             },
             {
-              value: "EFA-Funding-condition-english",
-              text: "EFA-Funding-condition-english"
-            },
-            {
-              value: "EFA-Funding-condition-maths",
-              text: "EFA-Funding-condition-maths"
-            },
-            {
               value: "European-social-fund",
               text: "European-social-fund"
             },
@@ -440,31 +432,98 @@
       </h2>
       <span class="selected-text govuk-body govuk-!-font-size-16"> <span class="counter">1</span> selected</span>
       <div class="filter-box hidden">
-          <div class="govuk-date-input govuk-!-margin-top-3 govuk-!-margin-left-3">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+          <div id="custom-box" class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+                
+                <span id="how-contacted-conditional-hint" class="govuk-hint">
+                  Select one option.
+                </span>
+                <div class="govuk-radios govuk-radios--small govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional" >
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                      Before
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+                    <div class="govuk-form-group">
+                      
+                      <div class="govuk-date-input" id="date-before">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-before-day" name="date-before-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-before-month" name="date-before-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item govuk-!-margin-right-0">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-before-year" name="date-before-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <br>
+                    <button id="datesBefore" class="govuk-button govuk-button--secondary flex" data-module="govuk-button">
+                      Apply dates
+                    </button> -->
+                  </div>
+                  
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-2" >
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                      After
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                    <div class="govuk-form-group">
+                      
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-after-day" name="date-after-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-after-month" name="date-after-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item govuk-!-margin-right-0">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-after-year" name="date-after-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <br>
+                    <button id="datesAfter" class="govuk-button govuk-button--secondary flex" data-module="govuk-button">
+                      Apply dates
+                    </button> -->
+                  </div>
                 </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
-                </div>
-              </div>
+              </fieldset>
             </div>
       </div>
   </section>
