@@ -717,3 +717,5 @@ $('#academic-year').on('change',function(){
   // alert("Selected Option Text: "+optionText);
   $(".academic-year-container").text(optionText);
 });
+
+$('#applyAcademicYear').hide();
