@@ -208,3 +208,17 @@ $govuk-assets-path: '/govuk/assets/';
         margin-bottom: 10px;
     }
 }
+
+@include govuk-media-query($from: tablet) {
+
+    .white-side-bar {
+        background-color: white;
+        margin-top: -300px;
+        padding: 15px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+}
