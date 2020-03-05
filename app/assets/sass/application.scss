@@ -233,8 +233,9 @@ $govuk-assets-path: '/govuk/assets/';
     padding-bottom: 10px;
 }
 
-.float-right {
+.academic-year-wrapper {
     float: right;
+    margin-top: 8px;
 }
 
 .two-thirds-width {
@@ -244,6 +245,14 @@ $govuk-assets-path: '/govuk/assets/';
         padding-bottom: 5px;
     }
 
-    padding-bottom: 10px;
-    width: 66%;
+}
+
+@include govuk-media-query($from: tablet) {
+
+    .two-thirds-width {
+
+        padding-bottom: 10px;
+        width: 66%;
+    }
+
 }
