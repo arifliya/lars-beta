@@ -256,3 +256,25 @@ $govuk-assets-path: '/govuk/assets/';
     }
 
 }
+
+.flex-4 {
+    flex: 0.4;
+}
+
+.flex-6 {
+    flex: 0.6;
+}
+
+#typeOfLearning {
+    margin-left: 20px;
+
+    #learning {
+        height: 2.4rem;
+    }
+}
+
+#learning {
+    height: 2.6rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
