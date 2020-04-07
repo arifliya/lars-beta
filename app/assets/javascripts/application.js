@@ -14,6 +14,11 @@ $('#backLink').on('click', function(e){
   window.history.back();
 });
 
+$('.backLink').on('click', function(e){
+  e.preventDefault();
+  window.history.back();
+});
+
 // Search filters for awarding body //
 $("#awarding-body-input").on("keyup", function() {
   var value = this.value.toLowerCase().trim();

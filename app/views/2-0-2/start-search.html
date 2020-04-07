@@ -18,8 +18,10 @@
               
             </h1>
             
-            <p class="govuk-body-l white-text">Find the latest information on available qualifications and funding for further education providers.</p>
-            <p class="govuk-body white-text">See funding streams for courses and the last date learners can start. You can also download datasets used in the funding information system (FIS).</p>
+            <p class="govuk-body-l white-text">Find the latest information on available qualifications, apprenticeship frameworks, and funding for further education providers.</p>
+            <p class="govuk-body white-text">Qualifications will show you funding streams for courses and the last date learners can start. Frameworks will show you pathways, dates, and the issuing authority. You can also download datasets used in the funding information system (FIS).
+
+            </p>
             
            
           </div>
@@ -33,15 +35,15 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="app-masthead-v2">
       <!-- <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Search</h1> -->
-      <label class="govuk-heading-m" for="tt-overlay">Qualification name or reference number
+      <!-- <label class="govuk-heading-m" for="tt-overlay">Qualification name or reference number
           <span class="govuk-hint">
               For example, psychology or 40010740
           </span>
-      </label>
+      </label> -->
       <form id="changeUrl" class="govuk-form-group" action="all-results-func">
         <div class="flex space-between">
-          <div class="flex-6">                  
-            <label class="govuk-label">Search by <strong>name</strong> or <strong>reference number</strong></label>
+          <div class="flex-7">                  
+            <label class="govuk-label">Search by <strong>learning aim</strong> or <strong>reference number</strong></label>
           <div id="tt-overlay" class="autocomplete-wrapper" aria-label="Search by name or reference number"></div>
         </div>
 
@@ -51,8 +53,8 @@
               Type of learning
             </label>
             <select class="govuk-select" id="learning" name="learning">
-              <option value="select a type" selected></option>
-              <option value="qualification">Qualification</option>
+              
+              <option value="qualification" selected>Qualification</option>
               <option value="frameworks">Frameworks</option>
             </select>
           </div>
