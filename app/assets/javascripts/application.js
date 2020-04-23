@@ -56,11 +56,18 @@ $("#searchProviders").click(function() {
     $('#changeUrl').attr('action', "all-results-frameworks");
     
   }
+  
+  if ($('#learning').val() === 'standards') {
+    $('#changeUrl').attr('action', "all-results-standards");
+    
+  }
 });
 
 $('.autocomplete__menu').click(function(){
   $("#searchProviders").trigger("click");
 });
+
+
 
 $('#learning2').change(function(){
 
@@ -71,7 +78,13 @@ $('#learning2').change(function(){
   if ($(this).val() === 'qualification') {
     window.location.href = "all-results-func"
   }
+  
+  if ($(this).val() === 'standards') {
+    window.location.href = "all-results-standards"
+  }
 });
+
+
 
 $('#autocomplete-overlay').keypress(function (e) {
   var key = e.which;
