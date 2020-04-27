@@ -164,6 +164,7 @@ $filterCheckboxes.on('change', function() {
     // $('#resultList li').hide();
     $('.loading-spinner').show();
     $('#resultList li').hide();
+    $(".no-results-message").hide();
   } else {
     // $('#resultList li').hide();
     $('.loading-spinner').show();
@@ -230,9 +231,10 @@ setTimeout(
   $("#listCount").append(listCount);
 
   if ($(listCount).text('0')) {
-    $("#listCount").text('There are no ');
-  }
-
+    $("#listCount").text('0 ');
+    $(".no-results-message").show();
+  } 
+ 
 }, 1000);
 
   if ($(this).is(':checked')) {
