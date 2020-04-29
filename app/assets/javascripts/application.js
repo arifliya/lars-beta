@@ -54,12 +54,14 @@ $("#searchProviders").click(function() {
 
   if ($('#learning').val() === 'frameworks') {
     $('#changeUrl').attr('action', "all-results-frameworks");
-    
   }
   
   if ($('#learning').val() === 'standards') {
     $('#changeUrl').attr('action', "all-results-standards");
-    
+  }
+  
+  if ($('#learning').val() === 'units') {
+    $('#changeUrl').attr('action', "all-results-units");
   }
 });
 
@@ -81,6 +83,10 @@ $('#learning2').change(function(){
   
   if ($(this).val() === 'standards') {
     window.location.href = "all-results-standards"
+  }
+  
+  if ($(this).val() === 'units') {
+    window.location.href = "all-results-units"
   }
 });
 
