@@ -35,18 +35,28 @@ $("#searchProviders").click(function() {
   if ($('.autocomplete__input').val() === 'certificate in engineering') {
     $('#changeUrl').attr('action', "all-results-engineering");
   }
+
   if ($('.autocomplete__input').val() === 'engineering') {
     $('#changeUrl').attr('action', "all-results-engineering");
   }
+
   if ($('.autocomplete__input').val() === 'psychology') {
     $('#changeUrl').attr('action', "all-results-psy");
   }
+
   if ($('.autocomplete__input').val() === 'functional skills qualification in mathematics') {
     $('#changeUrl').attr('action', "all-results-maths");
   }
+
   if ($('.autocomplete__input').val() === 'maths') {
     $('#changeUrl').attr('action', "all-results-maths");
   }
+
+  if ($('.autocomplete__input').val() === '445') {
+    $('#changeUrl').attr('action', "all-results-standards");
+  }
+  
+
   
   if ($('.autocomplete__input').val() === 'Access to HE Diploma - Science and Maths, 40010740') {
     $('#changeUrl').attr('action', "qualification");
@@ -90,6 +100,26 @@ $('#learning2').change(function(){
   }
 });
 
+
+$('#applyChangesButton').click(function() {
+  
+  if ($('#learning3').val() === 'frameworks') {
+    window.location.href = "all-results-frameworks"
+  }
+
+  if ($('#learning3').val() === 'qualification') {
+    window.location.href = "all-results-func"
+  }
+  
+  if ($('#learning3').val() === 'standards') {
+    window.location.href = "all-results-standards"
+  }
+  
+  if ($('#learning3').val() === 'units') {
+    window.location.href = "all-results-units"
+  }
+
+});
 
 
 $('#autocomplete-overlay').keypress(function (e) {

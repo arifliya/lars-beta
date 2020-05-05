@@ -255,6 +255,11 @@ $govuk-assets-path: '/govuk/assets/';
         width: 66%;
     }
 
+    #applyChangesButton {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
 }
 
 .flex-4 {
@@ -290,3 +295,4 @@ $govuk-assets-path: '/govuk/assets/';
 .no-results-message {
     display: none;
 }
+
