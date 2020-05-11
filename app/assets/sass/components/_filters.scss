@@ -1,3 +1,10 @@
+#sticky {
+  position: sticky;
+  height: 850px;
+  top: 0;
+  overflow: scroll;
+}
+
 .open-all {
   margin-top: 24px; 
   a {

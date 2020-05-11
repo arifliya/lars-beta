@@ -792,7 +792,7 @@ $('#academic-year').on('change',function(){
 $('#applyAcademicYear').hide();
 
 
-$('#openCloseAllFilters').click(function() {
+$('#openCloseAllFilters').click(function(e) {
 
   $('#allFilters a').trigger('click');
   $(this).text('Close all');
@@ -801,4 +801,5 @@ $('#openCloseAllFilters').click(function() {
     $('#openCloseAllFilters').text('Open all');
   }
 
+  e.preventDefault();
 });
