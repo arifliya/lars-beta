@@ -790,3 +790,15 @@ $('#academic-year').on('change',function(){
 });
 
 $('#applyAcademicYear').hide();
+
+
+$('#openCloseAllFilters').click(function() {
+
+  $('#allFilters a').trigger('click');
+  $(this).text('Close all');
+  
+  if ($('.filter-box').hasClass('hidden')) {
+    $('#openCloseAllFilters').text('Open all');
+  }
+
+});
