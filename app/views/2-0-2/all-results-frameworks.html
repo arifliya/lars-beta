@@ -54,7 +54,7 @@
               </span>
             </div>
             <div class="results-number-container">
-              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['framework-input'] }} </a> </span>
+              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
             </div>
           <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
             
@@ -173,7 +173,8 @@
   
         <div class="govuk-grid-column-one-third">
   
-        
+          <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
+          <p class="visually-hidden2">{{ data['level-input'] }}</p> 
   
         </div>
       </div>

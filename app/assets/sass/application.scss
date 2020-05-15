@@ -262,6 +262,14 @@ $govuk-assets-path: '/govuk/assets/';
 
 }
 
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
 .flex-4 {
     flex: 0.4;
 }
@@ -275,10 +283,13 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 #typeOfLearning {
-    margin-left: 20px;
+    
+    margin-right: 20px;
 
     #learning {
         height: 2.4rem;
+        width: 100%;
+        
     }
 }
 
@@ -292,7 +303,14 @@ $govuk-assets-path: '/govuk/assets/';
     margin-top: 44px;
 }
 
+#yearHome {
+    width: 100%;
+}
+
 .no-results-message {
     display: none;
 }
 
+.margin-right-20 {
+    margin-right: 20px;
+}
