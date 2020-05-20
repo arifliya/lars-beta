@@ -62,12 +62,16 @@ $("#searchProviders").click(function() {
     $('#changeUrl').attr('action', "qualification");
   }
 
-  if ($('#learning').val() === 'frameworks') {
-    $('#changeUrl').attr('action', "all-results-frameworks");
-  }
-  
   if ($('#learning').val() === 'standards') {
     $('#changeUrl').attr('action', "all-results-standards");
+  }
+
+  if ($('#learning').val() === 't-levels') {
+    $('#changeUrl').attr('action', "all-results-t-levels");
+  }
+
+  if ($('#learning').val() === 'frameworks') {
+    $('#changeUrl').attr('action', "all-results-frameworks");
   }
   
   if ($('#learning').val() === 'units') {
@@ -83,16 +87,20 @@ $('.autocomplete__menu').click(function(){
 
 $('#learning2').change(function(){
 
-  if ($(this).val() === 'frameworks') {
-    window.location.href = "all-results-frameworks"
-  }
-
   if ($(this).val() === 'qualification') {
     window.location.href = "all-results-func"
   }
   
   if ($(this).val() === 'standards') {
     window.location.href = "all-results-standards"
+  }
+  
+  if ($(this).val() === 't-levels') {
+    window.location.href = "all-results-t-levels"
+  }
+
+  if ($(this).val() === 'frameworks') {
+    window.location.href = "all-results-frameworks"
   }
   
   if ($(this).val() === 'units') {
@@ -103,9 +111,7 @@ $('#learning2').change(function(){
 
 $('#applyChangesButton').click(function() {
   
-  if ($('#learning3').val() === 'frameworks') {
-    window.location.href = "all-results-frameworks"
-  }
+  
 
   if ($('#learning3').val() === 'qualification') {
     window.location.href = "all-results-func"
@@ -113,6 +119,14 @@ $('#applyChangesButton').click(function() {
   
   if ($('#learning3').val() === 'standards') {
     window.location.href = "all-results-standards"
+  }
+
+  if ($('#learning3').val() === 't-levels') {
+    window.location.href = "all-results-t-levels"
+  }
+
+  if ($('#learning3').val() === 'frameworks') {
+    window.location.href = "all-results-frameworks"
   }
   
   if ($('#learning3').val() === 'units') {
