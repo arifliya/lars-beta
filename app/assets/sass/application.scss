@@ -16,6 +16,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 @import "components/search-box";
 @import "components/filters";
+@import "components/left-nav";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -260,6 +261,10 @@ $govuk-assets-path: '/govuk/assets/';
         margin-bottom: 0;
     }
 
+}
+
+.flex-05 {
+    flex: .5;
 }
 
 .flex-1 {

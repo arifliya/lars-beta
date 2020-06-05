@@ -84,6 +84,46 @@ $('.autocomplete__menu').click(function(){
 });
 
 
+$("#learning").change(function(){
+  if ($(this).val() === 'qualification') {
+    $('#academicYear').show();
+    $('#typeOfLearning').removeClass('flex-05');
+    $('#typeOfLearning').addClass('flex-1');
+  }  
+});
+
+$("#learning").change(function(){
+  if ($(this).val() === 'units') {
+    $('#academicYear').show();
+    $('#typeOfLearning').removeClass('flex-05');
+    $('#typeOfLearning').addClass('flex-1');
+  }  
+});
+
+$("#learning").change(function(){
+  if ($(this).val() === 'standards') {
+    $('#academicYear').hide();
+    $('#typeOfLearning').addClass('flex-05');
+    $('#typeOfLearning').removeClass('flex-1');
+  }  
+});
+
+$("#learning").change(function(){
+  if ($(this).val() === 't-levels') {
+    $('#academicYear').hide();
+    $('#typeOfLearning').addClass('flex-05');
+    $('#typeOfLearning').removeClass('flex-1');
+  }  
+});
+
+$("#learning").change(function(){
+  if ($(this).val() === 'frameworks') {
+    $('#academicYear').hide();
+    $('#typeOfLearning').addClass('flex-05');
+    $('#typeOfLearning').removeClass('flex-1');
+  }  
+});
+
 
 $('#learning2').change(function(){
 
@@ -816,4 +856,27 @@ $('#openCloseAllFilters').click(function(e) {
   }
 
   e.preventDefault();
+});
+
+$(function() {
+  
+});
+
+
+$('#navButton').click(function(){
+  $('#leftNav').show();
+  $(this).hide();
+});
+
+
+$(document).ready(function () {
+  if ( document.location.href.indexOf('funding') > -1 ) {
+    $('#leftNav #1').addClass('active');
+  }
+  if ( document.location.href.indexOf('frameworks') > -1 ) {
+    $('#leftNav #2').addClass('active');
+  }
+  if ( document.location.href.indexOf('category') > -1 ) {
+    $('#leftNav #3').addClass('active');
+  }
 });

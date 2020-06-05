@@ -1,0 +1,122 @@
+
+{% extends "layout-search-results.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<!-- <script type="text/javascript" src="/public/javascripts/functional-skills.json"></script> -->
+
+
+{% include "./results-search-component.html" %}
+
+      
+<div class="govuk-grid-row govuk-!-margin-top-6">
+
+        <div id="sticky" class="govuk-grid-column-one-third">
+          
+
+            {% include "./filters.html" %}
+          
+        </div>
+        
+
+        <div class="govuk-grid-column-two-thirds">
+          
+          
+            <p id="resultsContainer" class="govuk-body flex space-between">
+              <span>
+                <span id="listCount"></span> 
+                results
+              </span> 
+              <span>
+                <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+              </span>
+            </p>
+
+            <div class="filter-feedback-container">
+              <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
+                <span id="firstFilter">  
+                  <!-- <span class="close"></span><span class="filter-name">test</span>   -->
+                </span> 
+              </span>
+            </div>
+            <div class="results-number-container">
+              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
+            </div>
+          <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
+
+          <ul id="resultList" class="govuk-list">
+            <li data-category="NONE Level not applicable 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Basic Skills Maths</a></h3>
+                  <div class="flex space-between">
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong>Reference:</strong> 00239676</span>
+                      <span><strong>Awarding body:</strong> NONE</span>
+                    </div>
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong>Level:</strong> Not applicable</span>
+                      <span><strong>Guided learning hours:</strong> Not provided </span>
+                    </div>
+                  </div>
+                  
+                  <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-2 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019-2020</span></strong></span>
+                  
+                  <span class="govuk-body govuk-!-font-size-16">
+                    <span class="govuk-body govuk-!-font-size-16">
+                      <span>
+                        <strong>Last date for new start:</strong> 
+                        <span class="last-date-for-new"> 
+                          <span class="day">03</span>-<span class="month">01</span>-<span class="year">2020</span>
+                          <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                              <div class="flex-col funding-stream-list">
+                                <span> 16 to 19</span>
+                                <span>Adult skills</span>
+                              </div> 
+                              <div class="flex-col funding-stream-list">
+                                <span>Other</span>
+                                <span>Apprenticeships</span>
+                              </div>
+                              <div class="flex-col funding-stream-list">
+                                <span>European-social-fund</span>
+                              </div>
+                            </div>
+                        </span>
+                        <strong>Last date for new start:</strong> 
+                        <span class="last-date-for-new"> 
+                          <span class="day">01</span>-<span class="month">08</span>-<span class="year">2019</span>
+                          <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                              <div class="flex-col funding-stream-list">
+                                <span>Advanced learner loans</span>
+                              </div> 
+                              <div class="flex-col funding-stream-list">
+                                
+                                <span>Community learning</span>
+                                
+                              </div>
+                              <div class="flex-col funding-stream-list">
+                                <span>OLASS</span>
+                                
+                              </div>
+                            </div>
+                        </span>
+                      </span>
+                    </span> 
+                  </span>
+            </li>
+          </ul>
+        </div>
+  
+        <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
+        <p class="visually-hidden2">{{ data['level-input'] }}</p> 
+        
+      </div>
+    
+      {% include "./auto-js.html" %}
+
+
+{% endblock %}

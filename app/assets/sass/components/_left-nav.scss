@@ -1,0 +1,46 @@
+// #navButton.govuk-button {
+//   width: auto;
+// }
+
+#leftNav {
+  // display: none;
+  margin-left: -15px;
+
+  li {
+
+    
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      padding-left: 15px;
+      display: block;
+      line-height: 30px;
+    }
+
+    a.active {
+      border-left: 4px solid $govuk-link-colour;
+      padding-left: 11px;
+      font-weight: 700; 
+    }
+
+    a.govuk-link--no-visited-state.active:hover {
+      color: $govuk-link-colour;
+    }
+
+  }
+
+}
+
+@include govuk-media-query($from: tablet) {
+  
+  #navButton {
+    display: none;
+  }
+
+  #leftNav {
+    display: block;
+    margin-left: -20px;
+  }
+
+}
