@@ -879,4 +879,23 @@ $(document).ready(function () {
   if ( document.location.href.indexOf('category') > -1 ) {
     $('#leftNav #3').addClass('active');
   }
+  
+  if ( document.location.href.indexOf('pathways') > -1 ) {
+    $('#leftNav #A').addClass('active');
+  }
+  if ( document.location.href.indexOf('framework-common-components') > -1 ) {
+    $('#leftNav #B').addClass('active');
+  }
+  if ( document.location.href.indexOf('app-funding') > -1 ) {
+    $('#leftNav #C').addClass('active');
+  }
+  if ( document.location.href.indexOf('framework-related-aims') > -1 ) {
+    $('#leftNav #D').addClass('active');
+  }
+});
+
+$('#showMoreResults').click(function(e){
+  $('#hiddenRelatedItems').show();
+  $(this).hide();
+  e.preventDefault();
 });
