@@ -296,12 +296,20 @@ $govuk-assets-path: '/govuk/assets/';
         width: 100%;
         
     }
+
+    #learning-no-js {
+        @extend #learning;
+    }
 }
 
 #learning {
     height: 2.6rem;
     // margin-left: 10px;
     // margin-right: 10px;
+}
+
+#learning-no-js {
+    @extend #learning;
 }
 
 #learningLabel {
@@ -338,4 +346,26 @@ $govuk-assets-path: '/govuk/assets/';
 
 #hiddenRelatedItems {
     display: none;
+}
+
+.govuk-list.custom-spacing {
+    li {
+        
+            margin-bottom: 10px;
+       
+    }
+}
+
+.no-underline {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+.half-width {
+    width: 50%;
 }

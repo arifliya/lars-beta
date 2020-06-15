@@ -880,6 +880,7 @@ $(document).ready(function () {
     $('#leftNav #3').addClass('active');
   }
   
+
   if ( document.location.href.indexOf('pathways') > -1 ) {
     $('#leftNav #A').addClass('active');
   }
@@ -892,6 +893,17 @@ $(document).ready(function () {
   if ( document.location.href.indexOf('framework-related-aims') > -1 ) {
     $('#leftNav #D').addClass('active');
   }
+  
+  
+  if ( document.location.href.indexOf('standards') > -1 ) {
+    $('#leftNav #E').addClass('active');
+  }
+  if ( document.location.href.indexOf('st-common-components') > -1 ) {
+    $('#leftNav #F').addClass('active');
+  }
+  if ( document.location.href.indexOf('st-related-aims') > -1 ) {
+    $('#leftNav #G').addClass('active');
+  }
 });
 
 $('#showMoreResults').click(function(e){
@@ -899,3 +911,40 @@ $('#showMoreResults').click(function(e){
   $(this).hide();
   e.preventDefault();
 });
+
+
+$('#applyTypeOfLearning').click(function(e) {
+  
+    if ($('#learning-no-js').val() === 'qualification') {
+      $('#academicYear').show();
+      $('#typeOfLearning').addClass('flex-1');
+      $('#typeOfLearning').removeClass('flex-05');
+      $('#academicYear').addClass('flex-1');
+      $('#yearHome').prop('disabled', false);
+      
+    }  
+    if ($('#learning-no-js').val() === 'units') {
+      $('#academicYear').show();
+      $('#typeOfLearning').addClass('flex-1');
+      $('#typeOfLearning').removeClass('flex-05');
+      $('#academicYear').addClass('flex-1');
+      $('#yearHome').prop('disabled', false);
+      
+    }  
+
+    if ($('#learning-no-js').val() === 'standards') {
+      $('#yearHome').prop('disabled', true);
+      
+    }  
+    if ($('#learning-no-js').val() === 't-levels') {
+      $('#yearHome').prop('disabled', true);
+      
+    }  
+    if ($('#learning-no-js').val() === 'frameworks') {
+      $('#yearHome').prop('disabled', true);
+      
+    }  
+ 
+    e.preventDefault();
+});
+
