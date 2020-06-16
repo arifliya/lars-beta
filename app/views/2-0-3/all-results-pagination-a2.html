@@ -69,9 +69,15 @@
             </span>
             </section>
 
-            <span>
+            <p id="resultsContainer" class="govuk-body flex space-between">
+              <span>
+                <span id="listCount"></span> 
+                results
+              </span> 
+              <span>
                 <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
               </span>
+            </p>
 
             <div class="filter-feedback-container">
               <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
@@ -2145,6 +2151,49 @@
                               </span>
                           </li>
           </ul>
+
+          <section id="resultsContainer" class="govuk-body flex space-between">
+              
+            <span class="govuk-grid-column-one-third govuk-!-padding-0">
+              <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a1.html">
+                  <svg class="previous-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  Previous
+                </a>
+            </span>
+            
+            <ul class="govuk-list  govuk-grid-column-one-third govuk-!-padding-0 govuk-!-margin-bottom-0 text-align-centre flex space-between">
+             
+              <li>
+                  <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a1.html">1</a>
+              </li>
+              <li>
+                2
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a3.html">3</a>
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">4</a>
+              </li>
+              <li>
+                ...
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">1240</a>
+              </li>
+            
+            </ul>
+
+            <span class="govuk-grid-column-one-third govuk-!-padding-0 text-align-right">
+            <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a3.html">Next
+                <svg class="next-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+            </a>
+          </span>
+          </section>
 
         </div>
   

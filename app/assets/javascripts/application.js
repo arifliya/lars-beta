@@ -920,29 +920,29 @@ $('#applyTypeOfLearning').click(function(e) {
       $('#typeOfLearning').addClass('flex-1');
       $('#typeOfLearning').removeClass('flex-05');
       $('#academicYear').addClass('flex-1');
-      $('#yearHome').prop('disabled', false);
-      
+      // $('#yearHome').prop('disabled', false);
+      $('#academicYear').show();
     }  
     if ($('#learning-no-js').val() === 'units') {
       $('#academicYear').show();
       $('#typeOfLearning').addClass('flex-1');
       $('#typeOfLearning').removeClass('flex-05');
       $('#academicYear').addClass('flex-1');
-      $('#yearHome').prop('disabled', false);
-      
+      // $('#yearHome').prop('disabled', false);
+      $('#academicYear').show();
     }  
 
     if ($('#learning-no-js').val() === 'standards') {
-      $('#yearHome').prop('disabled', true);
-      
+      // $('#yearHome').prop('disabled', true);
+      $('#academicYear').hide();
     }  
     if ($('#learning-no-js').val() === 't-levels') {
-      $('#yearHome').prop('disabled', true);
-      
+      // $('#yearHome').prop('disabled', true);
+      $('#academicYear').hide();
     }  
     if ($('#learning-no-js').val() === 'frameworks') {
-      $('#yearHome').prop('disabled', true);
-      
+      // $('#yearHome').prop('disabled', true);
+      $('#academicYear').hide();
     }  
  
     e.preventDefault();
