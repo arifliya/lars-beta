@@ -327,6 +327,8 @@ setTimeout(
  
 }, 1000);
 
+  
+
   if ($(this).is(':checked')) {
     var checkboxValue = $(this).val();
     $('.filter-feedback-container').show();
@@ -339,12 +341,14 @@ setTimeout(
       $('.filter-name:contains("'+value+'")').parent().remove();
     }
   }
+
+
  
 
     
-  $('.filter-name').on('click', function(e) {
-    var filterValue = $(this).text();
-    $(this).parent().remove(); // remove the button
+  $('.filter-feedback').on('click', function(e) {
+    var filterValue = $(this).children().text();
+    $(this).remove(); // remove the button
     if ($('#allFilters :checkbox').has('label:contains("'+filterValue+'")')) {
       $('label:contains("'+filterValue+'")').trigger('click');
     }
@@ -368,14 +372,14 @@ setTimeout(
 
 
   if ($('#awardingBody :checkbox').is(':checked')) {
-    
-    $('#awardingBody .selected-text').show();
 
+    $('#awardingBody .selected-text').show();
     var count = $("#awardingBody :checkbox:checked").length;
     $('#awardingBody .counter').text('');
     $('#awardingBody .counter').append(count);
 
   } else {
+    
     $('#awardingBody .selected-text').hide();
   }
 
