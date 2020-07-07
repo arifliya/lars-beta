@@ -952,3 +952,93 @@ $('#applyTypeOfLearning').click(function(e) {
     e.preventDefault();
 });
 
+
+// var ascending = true;
+
+// var $myColorList = $('#resultList');
+// var $colors = $myColorList.children('li');
+// var sortList = Array.prototype.sort.bind($colors);
+
+// var doSort = function ( ascending ) {
+    
+//     sortList(function ( a, b ) {
+
+//         var aText = a.innerHTML;
+//         var bText = b.innerHTML;
+
+//         if ( aText < bText ) {
+//             return ascending ? -1 : 1;
+//         }
+
+//         if ( aText > bText ) {
+//             return ascending ? 1 : -1;
+//         }
+
+//         return 0;
+//     });
+    
+//     $myColorList.append($colors);
+
+// };
+
+// $('#btn-sort').on('click', function () {
+//     doSort(ascending);
+//     ascending = !ascending;
+
+//     $(this).addClass('inactive-link')
+// });
+
+
+
+
+
+$('#reference').click(function(e) {
+  $("#resultList li").sort(sort_li) // sort elements
+  .appendTo('#resultList'); // append again to the list
+  // sort function callback
+  function sort_li(a, b){
+      return ($(b).data('number')) < ($(a).data('number')) ? 1 : -1;    
+  }
+  $("#sortUI span a").removeClass('inactive-link')
+  $(this).addClass('inactive-link')
+  e.preventDefault();
+});
+
+$('#btn-sort').click(function(e) {
+  $("#resultList li").sort(sort_li) // sort elements
+  .appendTo('#resultList'); // append again to the list
+  // sort function callback
+  function sort_li(a, b){
+      return ($(b).data('title')) < ($(a).data('title')) ? 1 : -1;    
+  }
+  $("#sortUI span a").removeClass('inactive-link')
+  $(this).addClass('inactive-link')
+  e.preventDefault()
+});
+
+
+$("#sortDropDown").change(function () {
+  
+  if($(this).val()=="reference"){ 
+    $("#resultList li").sort(sort_li).appendTo('#resultList'); 
+    function sort_li(a, b){
+        return ($(b).data('number')) < ($(a).data('number')) ? 1 : -1;    
+    }
+  }
+  
+  if($(this).val()=="alphabet"){ 
+    $("#resultList li").sort(sort_li).appendTo('#resultList'); 
+    function sort_li(a, b){
+        return ($(b).data('title')) < ($(a).data('title')) ? 1 : -1;    
+    }
+  }
+
+  if($(this).val()=="level"){ 
+    $("#resultList li").sort(sort_li).appendTo('#resultList'); 
+    function sort_li(a, b){
+        return ($(b).data('level')) < ($(a).data('level')) ? 1 : -1;    
+    }
+  }
+
+
+});

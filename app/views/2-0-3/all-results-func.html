@@ -54,6 +54,28 @@
 
           <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
 
+          <!-- <span class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Sort by</span>
+          <div id="sortUI" class="govuk-body flex space-between width-70 govuk-!-margin-top-1">
+            <span class="govuk-body govuk-!-font-size-16"> <a class="govuk-link govuk-link--no-visited-state" href="#"> Relevance</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a id="reference" class="govuk-link govuk-link--no-visited-state" href="#"> Reference</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a id="btn-sort" class="govuk-link govuk-link--no-visited-state" href="#"> Alphabet</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a class="govuk-link govuk-link--no-visited-state" href="#">Level</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a class="govuk-link govuk-link--no-visited-state" href="#">Newest</a></span>
+          </div> -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              Sort by
+            </label>
+            <select class="govuk-select" id="sortDropDown" name="sortDropDown">
+              <option value="relevance" selected>Relevance</option>
+              <option value="reference">Reference</option>
+              <option value="alphabet">Alphabet</option>
+              <option value="level">Level</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+          
           {% include "./func.html" %}
 
         </div>

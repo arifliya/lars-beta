@@ -397,3 +397,15 @@ $govuk-assets-path: '/govuk/assets/';
 .half-width {
     width: 50%;
 }
+
+.width-70 {
+    width: 75%;
+}
+
+.inactive-link {
+    text-decoration: none !important;
+    color: black !important;
+    font-weight: 700 !important;
+    pointer-events: none;
+    cursor: default;
+}
