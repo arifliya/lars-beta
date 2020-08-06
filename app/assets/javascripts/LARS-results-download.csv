@@ -1,9 +1,91 @@
-Description,Reference,Level,Awarding body,Guided Learning Hours,Funding streams (academic year 2019 to 2020),Funding type,Maximum value (weighted),Maximum value (unweighted),Effective from,Effective to,Last date for new starts,Start date,End date,Created date,Modified date
-Award in Functional Skills Information and Communication Technology (QCF),10064710,Entry,NCFE,45,16 to 19,-,-,-,-,-,31/08/2020,01/09/2014,31/08/2025,16/10/2014,15/02/2019
-,,,,,other,-,-,-,-,-,31/08/2022,01/09/2014,31/08/2025,09/09/2014,23/11/2019
-,,,,,European social fund,Matrix,5421,4170,01/08/2015,31/07/2021,31/07/2020,01/08/2015,31/07/2021,03/11/2015,15/03/2019
-,,,,,Adult skills,Matrix,5421,4170,01/09/2014,31/07/2023,31/07/2020,01/09/2014,31/07/2023,07/04/2015,17/04/2019
-,,,,,Apprenticeships,Apprenticeship (Activity Costs),5439,4148,18/04/2016,31/08/2025,31/08/2022,31/08/2022,18/04/2016,30/03/2016,25/06/2019
-,,,,,OLASS,,,,,,,,,,
-,,,,,Advanced learner loans,,,,,,,,,,
-,,,,,Community learning,-,,,-,-,,,,,
+Qualification title,Reference,Level,Awarding body,Guided Learning Hours,Funding streams (academic year 2019 to 2020),Last date for new starts,Category,Effective From,Effective To,Programme weighting,Weighted rate,Unweighted rate
+Award in Functional Skills Information and Communication Technology (QCF),10064710,Entry,NCFE,45,16 to 19,31/08/2020,-,1/9/15,31/8/21,-,-,-
+,,,,,other,31/08/2022,-,2/9/15,1/9/21,-,-,-
+,,,,,European social fund,31/07/2020,Matrix,3/9/15,2/9/21,C,2267,1744
+,,,,,Adult skills,31/07/2020,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Apprenticeships,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,OLASS,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Advanced learner loans,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Community learning,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+Award in Functional Skills English (QCF),50024115,Entry,City and Guilds,45,16 to 19,31/08/2020,-,1/9/15,31/8/21,-,-,-
+,,,,,other,31/08/2022,-,2/9/15,1/9/21,-,-,-
+,,,,,European social fund,31/07/2020,Matrix,3/9/15,2/9/21,C,2267,1744
+,,,,,Adult skills,31/07/2020,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Apprenticeships,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,OLASS,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Advanced learner loans,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Community learning,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+Award in Functional Skills Mathematics (QCF),50024127,Entry,City and Guilds,45,16 to 19,31/08/2020,-,1/9/15,31/8/21,-,-,-
+,,,,,other,31/08/2022,-,2/9/15,1/9/21,-,-,-
+,,,,,European social fund,31/07/2020,Matrix,3/9/15,2/9/21,C,2267,1744
+,,,,,Adult skills,31/07/2020,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Apprenticeships,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,OLASS,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Advanced learner loans,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Community learning,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+Award in Functional Skills English (QCF),50025247,Entry,City and Guilds,45,16 to 19,31/08/2020,-,1/9/15,31/8/21,-,-,-
+,,,,,other,31/08/2022,-,2/9/15,1/9/21,-,-,-
+,,,,,European social fund,31/07/2020,Matrix,3/9/15,2/9/21,C,2267,1744
+,,,,,Adult skills,31/07/2020,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Apprenticeships,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,OLASS,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Advanced learner loans,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Community learning,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+Award in Functional Skills English (QCF),50025582,Entry,ASDAN,45,16 to 19,31/08/2020,-,1/9/15,31/8/21,-,-,-
+,,,,,other,31/08/2022,-,2/9/15,1/9/21,-,-,-
+,,,,,European social fund,31/07/2020,Matrix,3/9/15,2/9/21,C,2267,1744
+,,,,,Adult skills,31/07/2020,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Apprenticeships,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,OLASS,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Advanced learner loans,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
+,,,,,Community learning,31/08/2022,Adult learner responsive,31/7/13,31/7/13,A,872,872
+,,,,,-,-,Employer responsive,31/7/13,31/7/13,A,1122,1122
+,,,,,-,-,Matrix,1/8/13,1/7/23,A,724,724
