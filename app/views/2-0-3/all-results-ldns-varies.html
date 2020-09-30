@@ -28,8 +28,8 @@
           
             <p id="resultsContainer" class="govuk-body flex space-between">
               <span>
-                <span id="listCount"></span> 
-                results
+                 
+              1 result
               </span> 
               <span>
                 <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
@@ -50,7 +50,7 @@
 
           <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
 
-          <ul id="resultList" class="govuk-list">
+          <!-- <ul id="resultList" class="govuk-list">
             <li data-category="NONE Level not applicable 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
                 <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="funding">Basic Skills Maths</a></h3>
                   <div class="flex space-between">
@@ -71,7 +71,7 @@
                       <span>
                         <strong>Last date for new start:</strong> 
                         <span class="last-date-for-new"> 
-                          <span class="day">03</span>-<span class="month">01</span>-<span class="year">2020</span>
+                          Varies - see listing for details
                           <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
                               <div class="flex-col funding-stream-list">
                                 <span> 16 to 19</span>
@@ -86,16 +86,95 @@
                               </div>
                             </div>
                         </span>
-                        <strong>Last date for new start:</strong> 
-                        <span class="last-date-for-new"> 
-                          Varies - see listing for details
-                          
-                        </span>
+                        
                       </span>
                     </span> 
                   </span>
             </li>
-          </ul>
+          </ul> -->
+        <div id="resultList">
+        <search-item class="search-item">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="#">
+            Basic Skills Maths<span class="govuk-visually-hidden"> course name</span>
+          </a></h3>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+              <div class="mob-row">
+              <dt class="govuk-summary-list__key">
+                Reference 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  00239676
+              </dd>
+            </div>
+            <div class="mob-row">
+              <dt class="govuk-summary-list__key">
+                Level 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  1
+              </dd>
+            </div>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <div class="mob-row">
+              <dt class="govuk-summary-list__key">
+                Awarding body
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  None
+              </dd>
+              </div>
+              <div class="mob-row">
+              <dt class="govuk-summary-list__key custom-width">
+                Guided learning hours
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  30
+              </dd>
+              </div>
+            </div>
+          </dl>
+          <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2019-2020</h4>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+              <div class="govuk-summary-list__row govuk-!-font-size-16">
+                  <div class="mob-row">  
+                <dt id="ldns-width" class="govuk-summary-list__key custom">
+                      Last date for new start
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Varies - see listings for details
+                  </dd>
+                  </div>
+              </div>
+          </dl>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+            <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">  
+              <div class="mob-row">
+                <dd class="govuk-summary-list__value custom">
+                    16 to 19
+                </dd>
+                <dd class="govuk-summary-list__value custom">
+                    Other
+                </dd>
+                <dd class="govuk-summary-list__value custom">
+                    European-social-fund
+                </dd>
+              </div>
+            </div>
+            <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">  
+              <div class="mob-row">
+                <dd class="govuk-summary-list__value custom">
+                    Adult skills
+                </dd>
+                <dd class="govuk-summary-list__value custom">
+                    Apprenticeships
+                </dd>
+              </div>
+            </div>
+          </dl>
+        </search-item>
+      </div>
         </div>
   
         <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
