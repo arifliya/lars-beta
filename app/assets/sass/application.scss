@@ -476,3 +476,9 @@ $govuk-assets-path: '/govuk/assets/';
         width: 30%;
     }
 }
+
+#qualificationDetails {
+    dt, dd {
+        border-bottom: 0;
+    }
+}
