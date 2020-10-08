@@ -1,0 +1,82 @@
+{% extends "layout-search-results.html" %}
+
+{% block pageTitle %}
+  Qualification search results
+{% endblock %}
+
+{% block content %}
+
+<!-- <script type="text/javascript" src="/public/javascripts/engineering.json"></script> -->
+ 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="standard-search">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Search qualifications</h1>
+            <form id="changeUrl" class="govuk-form-group" action="">
+              <div id="tt-overlay" class="autocomplete-wrapper second"></div>
+              
+              <button id="searchProviders" type="search" class="govuk-button" ><img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+            </form>
+          </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group flex-col">
+          <label id="learningLabel" class="govuk-label" for="learning2">
+            Type of learning 
+          </label>
+          <select class="govuk-select" id="learning3" name="learning2">
+            
+            <option value="qualification" selected>Qualifications</option>
+            <option value="frameworks">Frameworks</option>
+            <option value="standards">Standards</option>
+            <option value="t-levels">T Levels </option>
+            <option value="units">Units</option>
+            
+          </select>
+          <a id="applyChangesButton" href="#" class="govuk-!-margin-top-4 govuk-button govuk-button--secondary">Apply</a>
+        </div>
+    </div>
+  </div>
+
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+
+        <div id="sticky" class="govuk-grid-column-one-third">
+          
+
+            {% include "./filters-2.html" %}
+          
+        </div>
+        
+
+        <div class="govuk-grid-column-two-thirds">
+          
+          
+            <p id="resultsContainer" class="govuk-body flex space-between"><span><span id="listCount">500</span> results</span> <span><a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+            </span></p>
+            <div class="filter-feedback-container">
+              <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>  
+                <span id="firstFilter"> 
+                  
+                </span> 
+              </span>
+            </div>
+            <div class="results-number-container">
+              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
+            </div>
+          <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          
+
+          {% include "./engineering.html" %}
+
+        </div>
+  
+        <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
+        <p class="visually-hidden2">{{ data['level-input'] }}</p> 
+        
+      </div>
+    
+      {% include "./auto-js.html" %}
+
+
+{% endblock %}

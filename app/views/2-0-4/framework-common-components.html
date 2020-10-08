@@ -1,0 +1,127 @@
+
+{% extends "layout-cc.html" %}
+
+{% block pageTitle %}
+  Framework common components
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+        
+        <h1 class="govuk-heading-xl">Framework detail view
+            
+          </h1>
+
+          <table id="high-level-info" class="govuk-table ">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Framework</th>
+                  <td class="govuk-table__cell">504 - Improving Operational Performance</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Framework type</th>
+                  <td class="govuk-table__cell">3 - Intermediate apprenticeship</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Pathway</th>
+                  <td class="govuk-table__cell">0 -</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Issuing authority</th>
+                  <td class="govuk-table__cell">126 - Semta</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Effective from</th>
+                  <td class="govuk-table__cell">23 June 2011</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Effective to</th>
+                  <td class="govuk-table__cell">06 March 2013</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  </div>
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            {% include "./left-nav-funding.html" %}
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          
+          
+          
+          <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-heading-l">Common components</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Code</th>
+                  <th scope="col" class="govuk-table__header">Description</th>
+                  <th scope="col" class="govuk-table__header">Level</th>
+                  <th scope="col" class="govuk-table__header">Effective from</th>
+                  <th scope="col" class="govuk-table__header">Effective to</th>
+                </tr>
+              </thead>
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">1</th>
+                  <td class="govuk-table__cell">Key skills in communication</td>
+                  <td class="govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">1 August 2013</td>
+                  <td class="govuk-table__cell">-</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">2</th>
+                  <td class="govuk-table__cell">Key Skills in Application of Number</td>
+                  <td class="govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">1 August 2013</td>
+                  <td class="govuk-table__cell">-</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">3</th>
+                  <td class="govuk-table__cell">Key Skills in Information and Communication Technology</td>
+                  <td class="govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">1 August 2013</td>
+                  <td class="govuk-table__cell">-</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">10</th>
+                  <td class="govuk-table__cell">Functional Skills Mathematics</td>
+                  <td class="govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">1 August 2013</td>
+                  <td class="govuk-table__cell">-</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">11</th>
+                  <td class="govuk-table__cell">Functional Skills English</td>
+                  <td class="govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">1 August 2013</td>
+                  <td class="govuk-table__cell">-</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">12</th>
+                  <td class="govuk-table__cell">Functional Skills Information and Communication Technology</td>
+                  <td class="govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">1 August 2013</td>
+                  <td class="govuk-table__cell">-</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+
+          
+        </div>
+  
+        <div class="govuk-grid-column-one-third">
+  
+          
+  
+        </div>
+      </div>
+    
+{% endblock %}

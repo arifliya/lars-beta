@@ -1,0 +1,81 @@
+
+{% extends "layout-aims.html" %}
+
+{% block pageTitle %}
+  Category
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Certificate in Engineering
+    </h1>
+    
+    </div>
+    <div class="govuk-grid-column-one-third academic-year-wrapper">
+      <div class="govuk-form-group flex-col">
+        <label class="govuk-label" for="sort">
+          Academic year
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>2019 to 2020</option>
+          <option value="updated">2018 to 2019</option>
+          <option value="views">2017 to 2018</option>
+          <option value="comments">2016 to 2017</option>
+        </select>
+        <br>
+        <a href="#" id="applyAcademicYear" class="govuk-button" data-module="govuk-button">
+          Apply
+        </a>
+      </div>
+   
+  
+  </div> 
+  </div>
+      
+      <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-one-quarter">
+            {% include "./left-nav.html" %}
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+              <h2 class="govuk-heading-l">Category</h2>
+              <table class="govuk-table">
+                  <!-- <caption class="govuk-table__caption govuk-!-font-size-27">Category</caption> -->
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Reference</th>
+                      <th scope="col" class="govuk-table__header">Description</th>
+                      <th scope="col" class="govuk-table__header">Parent Reference</th>
+                      <th scope="col" class="govuk-table__header">Parent Description</th>
+                      <th scope="col" class="govuk-table__header">Effective from</th>
+                      <th scope="col" class="govuk-table__header">Effective to</th>
+                      
+                      
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">39</th>
+                      <td class="govuk-table__cell">Legal Entitlement-English and Maths</td>
+                      <td class="govuk-table__cell">0</td>
+                      <td class="govuk-table__cell">-</td>
+                      <td class="govuk-table__cell">1 August 2016</td>
+                      <td class="govuk-table__cell">31 August 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">40</th>
+                      <td class="govuk-table__cell">Local Flexibility</td>
+                      <td class="govuk-table__cell">0</td>
+                      <td class="govuk-table__cell">-</td>
+                      <td class="govuk-table__cell">1 August 2018</td>
+                      <td class="govuk-table__cell">1 August 2018</td>
+                    </tr>
+                    
+                    
+                  </tbody>
+              </table>
+        </div>
+      </div>
+    
+{% endblock %}

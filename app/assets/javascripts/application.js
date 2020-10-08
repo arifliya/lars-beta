@@ -881,6 +881,9 @@ $('#navButton').click(function(){
 
 
 $(document).ready(function () {
+  if ( document.location.href.indexOf('overview') > -1 ) {
+    $('#leftNav #0').addClass('active');
+  }
   if ( document.location.href.indexOf('funding') > -1 ) {
     $('#leftNav #1').addClass('active');
   }
