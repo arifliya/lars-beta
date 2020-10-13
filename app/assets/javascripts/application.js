@@ -895,6 +895,9 @@ $(document).ready(function () {
   }
   
 
+  if ( document.location.href.indexOf('framework-details') > -1 ) {
+    $('#leftNav #AA').addClass('active');
+  }
   if ( document.location.href.indexOf('pathways') > -1 ) {
     $('#leftNav #A').addClass('active');
   }
