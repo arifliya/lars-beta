@@ -482,3 +482,25 @@ $govuk-assets-path: '/govuk/assets/';
         border-bottom: 0;
     }
 }
+
+.standards-custom-width {
+    .govuk-summary-list__key {
+    width: 40%;
+    }
+}
+
+
+.gem-c-search__submit {
+    border: 0;
+    cursor: pointer;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(https://www.gov.uk/assets/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
+    background-repeat: no-repeat;
+    background-position: 2px 50%;
+    text-indent: -5000px;
+    overflow: hidden;
+}
