@@ -893,6 +893,15 @@ $(document).ready(function () {
   if ( document.location.href.indexOf('category') > -1 ) {
     $('#leftNav #3').addClass('active');
   }
+  if ( document.location.href.indexOf('basic-skills') > -1 ) {
+    $('#leftNav #4').addClass('active');
+  }
+  if ( document.location.href.indexOf('key-dates') > -1 ) {
+    $('#leftNav #5').addClass('active');
+  }
+  if ( document.location.href.indexOf('learn-direct') > -1 ) {
+    $('#leftNav #6').addClass('active');
+  }
   
 
   if ( document.location.href.indexOf('framework-details') > -1 ) {
