@@ -7,89 +7,184 @@
 
 {% block content %}
 
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">EFA funding condition - Maths</h1>
+          </div>
+      </div>
 
       <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+            {% include "./filters-EFA.html" %}
+        </div>
+
         <div class="govuk-grid-column-two-thirds">
           
-          <h1 class="govuk-heading-xl">EFA funding condition - Maths</h1>
+          
 
-          <ul id="resultList" class="govuk-list">
-            <li data-category="Edexcel Level-1 2019-2020 16-19">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Award for Proficiency in Number and Measure</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"> <span>40010740</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 1</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="City-Guilds Level-2 2018-2019">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-func">Award in Mathematics Skills - Measure, Shape and Space (Entry 2)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"> <span>5010987X</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>CG - City & Guilds of London Instit</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 2</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span> </p>
-                <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="AQA Level-1 2017-2018">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">	Award in Mathematics Skills - Number (Entry 1)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"> <span>6014838X</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>AQA - Assessment & Qualifications Alliance</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 1</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="City-Guilds Level-1 2019-2020">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-app">	Award in Mathematics Skills - Number (Entry 2)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"> <span>60008805</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>CG - City & Guilds of London Institute</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 1</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-2 2018-2019">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Award in Mathematics Skills - Number (Entry 3)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40010776</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 2</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Qualsafe-Awards Level-1 2018-2019">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Award in Mathematics Skills (Entry 1)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40008538</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Qualsafe Awards</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 1</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-4 2019-2020">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">	Award in Mathematics Skills (Entry 2)	</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>4000854X</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 4</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-3 2019-2020">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">	Award in Mathematics Skills (Entry 3)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40010533</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 3</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-1 2017-2018">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Award in Mathematics Skills (Measure, Shape and Space) (Entry 1)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40003863</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 1</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-2 2016-2017">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Certificate in Core Maths A (MEI)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>00287333</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 2</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-4 2018-2019">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Certificate in Core Maths B (MEI)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>4000398X</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 4</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-3 2019-2020">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">Certificate in Further Mathematics</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>00286603</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 3</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-3 2016-2017">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2-2">Award in English Skills (Entry 3)</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40003097</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 3</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-2 2019-2020">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">	Certificate in Further Mathematics HL</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40004880</span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 2</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-            <li data-category="Edexcel Level-1 2019-2020">
-              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-2">	Certificate in HL Mathematics</a>
-              <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-2"><span>40006396<span> &nbsp; &nbsp; &nbsp; &nbsp; <span>Edexcel</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>Level 1</span>&nbsp; &nbsp; &nbsp; &nbsp; <span>45 Guided learning hours</span></p>
-              <p class="govuk-body govuk-!-font-size-16"><span>Last date for new start: 31 August 2020</span></p>
-            </li>
-          </ul>
+          <div id="resultList" class="govuk-list">
+              
+              <search-item class="search-item">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                    	Award for Proficiency in Number and Measure<span class="govuk-visually-hidden"> course name</span>
+                  </a></h3>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Reference 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          60075880
+                      </dd>
+                    </div>
+                    <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Level 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          1
+                      </dd>
+                    </div>
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Awarding body
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          None
+                      </dd>
+                      </div>
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key custom-width">
+                        Guided learning hours
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          30
+                      </dd>
+                      </div>
+                    </div>
+                  </dl>
+                  <h4 class="govuk-heading-s govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Qualification validity</h4>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                      <div class="govuk-summary-list__row govuk-!-font-size-16">
+                          <div class="mob-row">  
+                        <dt id="ldns-width" class="govuk-summary-list__key custom">
+                              Last date for new start
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Varies - see listings for details
+                          </dd>
+                          </div>
+                      </div>
+                  </dl>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">  
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              From
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                01 August 2019
+                            </dd>
+                      </div>
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              To
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                31 July 2024
+                            </dd>
+                      </div>
+                    </div>
+                    
+                  </dl>
+                  
+              </search-item>
+              <br><br>
+              <search-item class="search-item">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                      Award in Mathematics Skills - Measure, Shape and Space (Entry 2)<span class="govuk-visually-hidden"> course name</span>
+                  </a></h3>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Reference 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          6007615X
+                      </dd>
+                    </div>
+                    <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Level 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          1
+                      </dd>
+                    </div>
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Awarding body
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          None
+                      </dd>
+                      </div>
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key custom-width">
+                        Guided learning hours
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          30
+                      </dd>
+                      </div>
+                    </div>
+                  </dl>
+                  <h4 class="govuk-heading-s govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Qualification validity</h4>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                      <div class="govuk-summary-list__row govuk-!-font-size-16">
+                          <div class="mob-row">  
+                        <dt id="ldns-width" class="govuk-summary-list__key custom">
+                              Last date for new start
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Varies - see listings for details
+                          </dd>
+                          </div>
+                      </div>
+                  </dl>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">  
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              From
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                01 August 2019
+                            </dd>
+                      </div>
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              To
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                31 July 2024
+                            </dd>
+                      </div>
+                    </div>
+                    
+                  </dl>
+                  
+              </search-item>
+
+            
+              </div>
          
         </div>
   
