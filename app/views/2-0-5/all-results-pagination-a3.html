@@ -1,0 +1,2224 @@
+
+{% extends "layout-search-results.html" %}
+
+{% block pageTitle %}
+Qualification search results
+{% endblock %}
+
+{% block content %}
+
+<!-- <script type="text/javascript" src="/public/javascripts/functional-skills.json"></script> -->
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Qualifications search results</h1>
+
+{% include "./results-search-component.html" %}
+
+      
+<div class="govuk-grid-row govuk-!-margin-top-6">
+
+        <div id="sticky" class="govuk-grid-column-one-third">
+          
+
+            {% include "./filters.html" %}
+          
+        </div>
+        
+
+        <div class="govuk-grid-column-two-thirds">
+          
+          
+            <section id="resultsContainer" class="govuk-body flex space-between">
+              
+              <span class="govuk-grid-column-one-third govuk-!-padding-0">
+                <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a2.html">
+                    <svg class="previous-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                      <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                    </svg>
+                    Previous
+                  </a>
+              </span>
+              
+              <ul class="govuk-list  govuk-grid-column-one-third govuk-!-padding-0 govuk-!-margin-bottom-0 text-align-centre flex space-between">
+               
+                <li>
+                    <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a1.html">1</a>
+                </li>
+                <li>
+                  <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a2.html">2</a>
+                </li>
+                <li>
+                  3
+                </li>
+                <li>
+                  <a class="govuk-link govuk-link--no-visited-state" href="#">4</a>
+                </li>
+                <li>
+                  ...
+                </li>
+                <li>
+                  <a class="govuk-link govuk-link--no-visited-state" href="#">1240</a>
+                </li>
+              
+              </ul>
+
+              <span class="govuk-grid-column-one-third govuk-!-padding-0 text-align-right">
+              <a class="govuk-link govuk-link--no-visited-state" href="#">Next
+                  <svg class="next-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                    <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg>
+              </a>
+            </span>
+            </section>
+
+            <p id="resultsContainer" class="govuk-body flex space-between">
+              <span>
+                <span id="listCount"></span> 
+                results
+              </span> 
+              <span>
+                <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+              </span>
+            </p>
+
+            <div class="filter-feedback-container">
+              <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
+                <span id="firstFilter">  
+                  <!-- <span class="close"></span><span class="filter-name">test</span>   -->
+                </span> 
+              </span>
+            </div>
+            <div class="results-number-container">
+              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
+            </div>
+          <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
+
+          <div class="no-results-message">
+            <p class="govuk-!-font-weight-bold">There are no results that match your search.</p> 
+            <p >Try changing the filters and searching again.</p>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              Sort by
+            </label>
+            <select class="govuk-select" id="sortDropDown" name="sortDropDown">
+              <option value="relevance" selected>Relevance</option>
+              <option value="reference">Reference</option>
+              <option value="alphabet">Alphabetical</option>
+              <option value="level">Level</option>
+              <option value="newest">Newest</option>
+              
+            </select>
+          </div>
+
+          
+
+          <ul id="resultList" class="govuk-list">
+            <li data-category="NCFE Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 10064710</span>
+                                  <span><strong>Awarding body:</strong> NCFE</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="City and Guilds Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50024115</span>
+                                  <span><strong>Awarding body:</strong> City and Guilds</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="City and Guilds Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50024127</span>
+                                  <span><strong>Awarding body:</strong> City and Guilds</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="ASDAN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50025247</span>
+                                  <span><strong>Awarding body:</strong> ASDAN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="OCR Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50025582</span>
+                                  <span><strong>Awarding body:</strong> OCR</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="OCR Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50025600</span>
+                                  <span><strong>Awarding body:</strong> OCR</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="OCR Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 5002565X</span>
+                                  <span><strong>Awarding body:</strong> OCR</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="Ascentis Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 5002632X</span>
+                                  <span><strong>Awarding body:</strong> Ascentis</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50026756</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EAL Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027153</span>
+                                  <span><strong>Awarding body:</strong> EAL</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EAL Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027165</span>
+                                  <span><strong>Awarding body:</strong> EAL</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EAL Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027177</span>
+                                  <span><strong>Awarding body:</strong> EAL</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="VTCT Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027475</span>
+                                  <span><strong>Awarding body:</strong> VTCT</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="VTCT Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027487</span>
+                                  <span><strong>Awarding body:</strong> VTCT</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="VTCT Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027529</span>
+                                  <span><strong>Awarding body:</strong> VTCT</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="VTCT Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027530</span>
+                                  <span><strong>Awarding body:</strong> VTCT</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="VTCT Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027542</span>
+                                  <span><strong>Awarding body:</strong> VTCT</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Mathematics (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50027839</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills English (Entry 2 and 3) (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50029022</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EAL Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (QCF)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50031648</span>
+                                  <span><strong>Awarding body:</strong> EAL</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2011</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills Qualification in Mathematics (Entry 1)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50084665</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Level 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50084914</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">01</span>-<span class="month">12</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Level 1</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50084926</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">01</span>-<span class="month">12</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50084938</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">30</span>-<span class="month">11</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="OCR Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Entry 1</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50084963</span>
+                                  <span><strong>Awarding body:</strong> OCR</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">30</span>-<span class="month">06</span>-<span class="year">2020</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (ICT) (Entry 3)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50085001</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2022</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="OCR Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT) at Entry 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50085025</span>
+                                  <span><strong>Awarding body:</strong> OCR</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2020</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="City and Guilds Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT) at Entry 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50085086</span>
+                                  <span><strong>Awarding body:</strong> City and Guilds</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2021</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50086832</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50087009</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="AQA Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50087034</span>
+                                  <span><strong>Awarding body:</strong> AQA</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50087514</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">01</span>-<span class="month">12</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English at Entry 1</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 5008835X</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Entry 3</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50089055</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">01</span>-<span class="month">12</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="AQA Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 5009029X</span>
+                                  <span><strong>Awarding body:</strong> AQA</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2017</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Entry 1</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50091724</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT) at Entry 3</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50091736</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">30</span>-<span class="month">11</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="WJEC Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT) at Entry 1</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 5009175X</span>
+                                  <span><strong>Awarding body:</strong> WJEC</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">30</span>-<span class="month">11</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Entry 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50091967</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EDI Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50092005</span>
+                                  <span><strong>Awarding body:</strong> EDI</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">12</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English at Entry 3</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50093204</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Mathematics at Entry 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50093356</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EdExcel Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50094683</span>
+                                  <span><strong>Awarding body:</strong> EdExcel</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2022</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50094695</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information Communication Technology (ICT) Entry 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50097635</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2020</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="NOCN Level-1 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50097647</span>
+                                  <span><strong>Awarding body:</strong> NOCN</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 1</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">07</span>-<span class="year">2020</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="City and Guilds Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in English at Entry 2</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50098378</span>
+                                  <span><strong>Awarding body:</strong> City and Guilds</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">08</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="EDI Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Functional Skills qualification in Information and Communication Technology (ICT) at Entry 3</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50099073</span>
+                                  <span><strong>Awarding body:</strong> EDI</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">31</span>-<span class="month">12</span>-<span class="year">2016</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="Ascentis Entry-level 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology (Entry 1)</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50101717</span>
+                                  <span><strong>Awarding body:</strong> Ascentis</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> Entry</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">22</span>-<span class="month">07</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li><li data-category="Ascentis Level-2 2019-2020 16-19 Adult-skills Advanced-learner-loans Other Apprenticeships Community-learning EFA-Funding-condition-english EFA-Funding-condition-maths European-social-fund OLASS Unemployed-offer" style="display: list-item;">
+                            <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="qualification-3">Award in Functional Skills Information and Communication Technology</a></h3>
+                              <div class="flex space-between">
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Reference:</strong> 50108359</span>
+                                  <span><strong>Awarding body:</strong> Ascentis</span>
+                                </div>
+                                <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                                  <span><strong>Level:</strong> 2</span>
+                                  <span><strong>Guided learning hours:</strong> 45 </span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-margin-bottom-0 govuk-!-font-size-16 flex"><strong>Available funding streams for academic year <span class="academic-year-container">2019 to 2020</span> :</strong></span>
+                              <div id="customList" class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-0 flex space-between">
+                                <div class="flex-col funding-stream-list">
+                                  <span>16 to 19</span>
+                                  <span>Adult Skills</span>
+                                  <span>Advanced Learner Loans</span>
+                                  
+                                </div> 
+                                <div class="flex-col funding-stream-list">
+                                  <span>Other</span>
+                                  <span>Apprenticeships</span>
+                                  <span>Community Learning</span>
+                                  
+                                </div>
+                                <div class="flex-col funding-stream-list">
+                                  <span>European Social Fund</span>
+                                  <span>OLASS</span>
+                                </div>
+                              </div>
+                              <span class="govuk-body govuk-!-font-size-16">
+                                <span class="govuk-body govuk-!-font-size-16">
+                                  <span>
+                                    <strong>Last date for new start:</strong> 
+                                    <span class="last-date-for-new"> 
+                                      <span class="day">22</span>-<span class="month">07</span>-<span class="year">2019</span>
+                                    </span>
+                                  </span>
+                                </span> 
+                              </span>
+                          </li>
+          </ul>
+
+          <section id="resultsContainer" class="govuk-body flex space-between">
+              
+            <span class="govuk-grid-column-one-third govuk-!-padding-0">
+              <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a2.html">
+                  <svg class="previous-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  Previous
+                </a>
+            </span>
+            
+            <ul class="govuk-list  govuk-grid-column-one-third govuk-!-padding-0 govuk-!-margin-bottom-0 text-align-centre flex space-between">
+             
+              <li>
+                  <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a1.html">1</a>
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-a2.html">2</a>
+              </li>
+              <li>
+                3
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">4</a>
+              </li>
+              <li>
+                ...
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">1240</a>
+              </li>
+            
+            </ul>
+
+            <span class="govuk-grid-column-one-third govuk-!-padding-0 text-align-right">
+            <a class="govuk-link govuk-link--no-visited-state" href="#">Next
+                <svg class="next-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+            </a>
+          </span>
+          </section>
+
+        </div>
+  
+        <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
+        <p class="visually-hidden2">{{ data['level-input'] }}</p> 
+        
+      </div>
+    
+      {% include "./auto-js.html" %}
+
+
+{% endblock %}

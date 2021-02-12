@@ -1,0 +1,425 @@
+{% extends "layout-search-results.html" %}
+
+{% block pageTitle %}
+Standards search results
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Standards search results</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <div class="standard-search">
+          <label class="govuk-label">Search by <strong>keyword</strong> or <strong>reference number</strong></label>
+          <form id="changeUrl" class="govuk-form-group" action="">
+            <div id="tt-overlay" class="autocomplete-wrapper"></div>
+            
+            <button id="searchProviders" type="search" class="govuk-button gem-c-search__submit" >
+              <!-- <img src="https://www.gov.uk/assets/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button> -->
+          </form>
+        </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group flex-col">
+        <label id="learningLabel" class="govuk-label" for="learning2">
+          Type of learning
+        </label>
+        <select class="govuk-select" id="learning2" name="learning2">
+          
+          <option value="qualification">Qualifications</option>
+          <option value="standards" selected>Standards</option>
+          <option value="t-levels">T Levels </option>
+          <option value="frameworks">Frameworks</option>
+          <option value="units">Units</option>
+
+        </select>
+      </div>
+  </div>
+</div>
+
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+
+        <div id="sticky" class="govuk-grid-column-one-third">
+          
+            {% include "./filters-standards.html" %}
+                   
+        </div>
+        
+
+        <div class="govuk-grid-column-two-thirds">
+          
+          
+            <p class="govuk-body flex space-between"><span><span >4</span> results</span> <span><a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="#">Download results</a></span></p>
+            <div class="filter-feedback-container">
+              <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>  
+                <span id="firstFilter"> 
+                  
+                </span> 
+              </span>
+            </div>
+            <div class="results-number-container">
+              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
+            </div>
+          <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+          <div id="resultList" class="govuk-list">
+              <search-item class="search-item">
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                  Automation and Controls Engineering Technician<span class="govuk-visually-hidden"> course name</span>
+                </a></h3>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    
+                    <dt class="govuk-summary-list__key">
+                      Code 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        104
+                    </dd>
+                  
+                  
+                    <dt class="govuk-summary-list__key">
+                      Level 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        4
+                    </dd>
+                  
+                  </div>
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                    <dt class="govuk-summary-list__key">
+                      Sector
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      71 - Engineering and Manufacturing
+                    </dd>
+                    
+                    
+                    <dt class="govuk-summary-list__key custom-width">
+                        Last date for new starts
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        - 
+                    </dd>
+                    
+                  </div>
+                </dl>
+                
+                
+                <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                    <dt id="ldns-width" class="govuk-summary-list__key custom">
+                          Effective from
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        26-03-2001
+                      </dd>
+                      
+                  </div>
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                    <dt id="ldns-width" class="govuk-summary-list__key custom">
+                          Effective to
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        21-06-2011
+                      </dd>
+                      
+                  </div>
+              </dl>
+              </search-item>
+              <br> <br>
+              <search-item class="search-item">
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                Building Services Engineering Craftsperson<span class="govuk-visually-hidden"> course name</span>
+                </a></h3>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    
+                    <dt class="govuk-summary-list__key">
+                      Code 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        104
+                    </dd>
+                  
+                  
+                    <dt class="govuk-summary-list__key">
+                      Level 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2
+                    </dd>
+                  
+                  </div>
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                    <dt class="govuk-summary-list__key">
+                      Sector
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      67 - Building Services Engineering
+                    </dd>
+                    
+                    
+                    <dt class="govuk-summary-list__key custom-width">
+                        Last date for new starts
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        - 
+                    </dd>
+                    
+                  </div>
+                </dl>
+                
+                
+                <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                    <dt id="ldns-width" class="govuk-summary-list__key custom">
+                          Effective from
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        26-03-2001
+                      </dd>
+                      
+                  </div>
+                  <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                    <dt id="ldns-width" class="govuk-summary-list__key custom">
+                          Effective to
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        21-06-2011
+                      </dd>
+                      
+                  </div>
+              </dl>
+              </search-item>
+              <br> <br>
+              <search-item class="search-item">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                  Bus and Coach Engineering Technician<span class="govuk-visually-hidden"> course name</span>
+                  </a></h3>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                      <dt class="govuk-summary-list__key">
+                        Code 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          104
+                      </dd>
+                    
+                    
+                      <dt class="govuk-summary-list__key">
+                        Level 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          3
+                      </dd>
+                    
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        
+                      <dt class="govuk-summary-list__key">
+                        Sector
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        58 - Bus, Coach and HGV
+                      </dd>
+                      
+                      
+                      <dt class="govuk-summary-list__key custom-width">
+                          Last date for new starts
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          - 
+                      </dd>
+                      
+                    </div>
+                  </dl>
+                  
+                  
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        
+                      <dt id="ldns-width" class="govuk-summary-list__key custom">
+                            Effective from
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          26-03-2001
+                        </dd>
+                        
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        
+                      <dt id="ldns-width" class="govuk-summary-list__key custom">
+                            Effective to
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          21-06-2011
+                        </dd>
+                        
+                    </div>
+                </dl>
+              </search-item>
+              <br> <br>
+              <search-item class="search-item">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                  Civil Engineering Site Management (Degree)<span class="govuk-visually-hidden"> course name</span>
+                  </a></h3>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      
+                      <dt class="govuk-summary-list__key">
+                        Code 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          104
+                      </dd>
+                    
+                    
+                      <dt class="govuk-summary-list__key">
+                        Level 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          6
+                      </dd>
+                    
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        
+                      <dt class="govuk-summary-list__key">
+                        Sector
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        68 - Engineering
+                      </dd>
+                      
+                      
+                      <dt class="govuk-summary-list__key custom-width">
+                          Last date for new starts
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          - 
+                      </dd>
+                      
+                    </div>
+                  </dl>
+                  
+                  
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 standards-custom-width">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        
+                      <dt id="ldns-width" class="govuk-summary-list__key custom">
+                            Effective from
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          26-03-2001
+                        </dd>
+                        
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        
+                      <dt id="ldns-width" class="govuk-summary-list__key custom">
+                            Effective to
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          21-06-2011
+                        </dd>
+                        
+                    </div>
+                </dl>
+              </search-item>
+
+
+              <!-- <div data-category="Skills-Active-Habia" style="display: list-item;">
+                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="standards">Automation and Controls Engineering Technician</a></h3>
+                  <div class="flex space-between">
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong>Code:</strong> 104</span>
+                      <span class="govuk-body govuk-!-font-size-16"><strong>Sector:</strong> 71 - Engineering and Manufacturing</span>
+                    </div>
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong> Level: </strong>4</span>
+                      <span class="govuk-body govuk-!-font-size-16"><span><strong>Last date for new starts:</strong> -</span>
+                    </div>
+                  </div>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective from:</strong> <span class="last-date-for-new"> <span class="day">26</span>-<span class="month">03</span>-<span class="year">2001</span></span></span></span>
+                <br>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective to:</strong> <span class="last-date-for-new"> <span class="day">21</span>-<span class="month">06</span>-<span class="year">2011</span></span></span></span>
+              </div> -->
+
+              <!-- <li data-category="Skills-Active-Habia" style="display: list-item;">
+                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="standards">Building Services Engineering Craftsperson</a></h3>
+                  <div class="flex space-between">
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong>Code:</strong> 104</span>
+                      <span class="govuk-body govuk-!-font-size-16"><strong>Sector:</strong> 67 - Building Services Engineering</span>
+                    </div>
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong> Level: </strong>2</span>
+                      <span class="govuk-body govuk-!-font-size-16"><span><strong>Last date for new starts:</strong> -</span>
+                    </div>
+                  </div>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective from:</strong> <span class="last-date-for-new"> <span class="day">26</span>-<span class="month">03</span>-<span class="year">2001</span></span></span></span>
+                <br>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective to:</strong> <span class="last-date-for-new"> <span class="day">21</span>-<span class="month">06</span>-<span class="year">2011</span></span></span></span>
+              </li>
+
+              <li data-category="Skills-Active-Habia" style="display: list-item;">
+                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="standards">Bus and Coach Engineering Technician</a></h3>
+                  <div class="flex space-between">
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong>Code:</strong> 104</span>
+                      <span class="govuk-body govuk-!-font-size-16"><strong>Sector:</strong> 58 - Bus, Coach and HGV</span>
+                    </div>
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong> Level: </strong>3</span>
+                      <span class="govuk-body govuk-!-font-size-16"><span><strong>Last date for new starts:</strong> -</span>
+                    </div>
+                  </div>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective from:</strong> <span class="last-date-for-new"> <span class="day">26</span>-<span class="month">03</span>-<span class="year">2001</span></span></span></span>
+                <br>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective to:</strong> <span class="last-date-for-new"> <span class="day">21</span>-<span class="month">06</span>-<span class="year">2011</span></span></span></span>
+              </li>
+
+              <li data-category="Skills-Active-Habia" style="display: list-item;">
+                <h3 class="govuk-!-font-size-19 govuk-!-margin-0"><a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline" href="standards">	Civil Engineering Site Management (Degree)</a></h3>
+                  <div class="flex space-between">
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong>Code:</strong> 104</span>
+                      <span class="govuk-body govuk-!-font-size-16"><strong>Sector:</strong> 68 - Engineering</span>
+                    </div>
+                    <div class="aims-list govuk-body govuk-!-font-size-16 govuk-!-margin-top-2 flex-col flex-1">
+                      <span><strong> Level: </strong>6</span>
+                      <span class="govuk-body govuk-!-font-size-16"><span><strong>Last date for new starts:</strong> -</span>
+                    </div>
+                  </div>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective from:</strong> <span class="last-date-for-new"> <span class="day">26</span>-<span class="month">03</span>-<span class="year">2001</span></span></span></span>
+                <br>
+                <span class="govuk-body govuk-!-font-size-16"><span><strong>Effective to:</strong> <span class="last-date-for-new"> <span class="day">21</span>-<span class="month">06</span>-<span class="year">2011</span></span></span></span>
+              </li> -->
+              
+                
+          </div>
+
+        </div>
+  
+        <div class="govuk-grid-column-one-third">
+  
+          <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
+          <p class="visually-hidden2">{{ data['level-input'] }}</p> 
+  
+        </div>
+      </div>
+    
+      {% include "./auto-js.html" %}
+
+
+{% endblock %}

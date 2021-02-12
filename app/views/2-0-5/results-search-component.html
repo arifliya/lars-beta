@@ -1,0 +1,39 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <div class="standard-search">
+          <label class="govuk-label">Search by <strong>title</strong> or <strong>reference number</strong></label>
+          <form id="changeUrl" class="govuk-form-group" action="">
+            <div id="tt-overlay" class="autocomplete-wrapper second"></div>
+            
+            <button id="searchProviders" type="search" class="govuk-button gem-c-search__submit" >
+              <!-- <img src="https://www.gov.uk/assets/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button> -->
+          </form>
+          
+        </div>
+        <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-2" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Search using a wildcard
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            A wildcard search allows you to search using the asterisk * symbol.
+            </div>
+        </details>
+  </div>
+  <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group flex-col">
+        <label id="learningLabel" class="govuk-label" for="learning2">
+          Type of learning
+        </label>
+        <select class="govuk-select" id="learning2" name="learning2">
+          
+          <option value="qualification" selected>Qualifications</option>
+          <option value="standards">Standards</option>
+          <option value="t-levels">T Levels </option>
+          <option value="frameworks">Frameworks</option>
+          <option value="units">Units</option>
+        </select>
+      </div>
+  </div>
+</div>

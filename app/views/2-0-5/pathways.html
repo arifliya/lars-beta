@@ -1,0 +1,53 @@
+
+{% extends "layout-pathway.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+      
+    <h1 class="govuk-heading-xl">Improving Operational Performance</h1>
+
+  </div>
+</div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+            {% include "./left-nav-funding.html" %}
+        </div>
+         <div class="govuk-grid-column-two-thirds"> 
+              <h2 class="govuk-heading-l ">Sector subject area</h2>
+              
+                <dl id="qualificationDetails" class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Tier one
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          08 - Leisure, Travel and Tourism
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Tier two
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          08.1 - Sport, Leisure and Recreation
+                      </dd>
+                    </div>
+                    
+                  </dl>
+          
+        </div>
+  
+        <div class="govuk-grid-column-one-third">
+  
+          
+  
+        </div>
+      </div>
+    
+{% endblock %}

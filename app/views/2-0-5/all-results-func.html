@@ -1,0 +1,106 @@
+
+{% extends "layout-search-results.html" %}
+
+{% block pageTitle %}
+  Qualification search results
+{% endblock %}
+
+{% block content %}
+
+<!-- <script type="text/javascript" src="/public/javascripts/functional-skills.json"></script> -->
+<h1 class="govuk-heading-xl ">Qualifications search results</h1>
+
+{% include "./results-search-component.html" %}
+
+      
+<div class="govuk-grid-row govuk-!-margin-top-6">
+
+        <div id="sticky" class="govuk-grid-column-one-third">
+          
+
+            {% include "./filters.html" %}
+          
+        </div>
+        
+
+        <div class="govuk-grid-column-two-thirds">
+          
+           
+            <p id="resultsContainer" class="govuk-body flex space-between">
+              <span>
+                <span id="listCount"></span> 
+                results
+              </span> 
+              <span>
+                <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+              </span>
+            </p>
+
+            <div class="filter-feedback-container">
+                
+              <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
+                <span id="firstFilter"></span> 
+                <!-- <div class="ab-group"><strong>Awarding body </strong><span class="govuk-body govuk-!-font-size-16 feedback-awarding-body"></span></div> -->
+                <!-- <div class="level-group"><strong>Level </strong><span class="govuk-body govuk-!-font-size-16 feedback-level"></span></div> -->
+              </span>
+            </div>
+
+            
+
+            <div class="results-number-container">
+              <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
+            </div>
+          <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
+
+          <!-- <span class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Sort by</span>
+          <div id="sortUI" class="govuk-body flex space-between width-70 govuk-!-margin-top-1">
+            <span class="govuk-body govuk-!-font-size-16"> <a class="govuk-link govuk-link--no-visited-state" href="#"> Relevance</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a id="reference" class="govuk-link govuk-link--no-visited-state" href="#"> Reference</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a id="btn-sort" class="govuk-link govuk-link--no-visited-state" href="#"> Alphabet</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a class="govuk-link govuk-link--no-visited-state" href="#">Level</a></span>
+            <span class="govuk-body govuk-!-font-size-16"> <a class="govuk-link govuk-link--no-visited-state" href="#">Newest</a></span>
+          </div> -->
+
+          <div class="govuk-form-group flex">
+            <div class="govuk-!-margin-top-1">
+            <label class="govuk-label" for="sort">
+              Academic year
+            </label>
+            <select class="govuk-select">
+              <option value="relevance" selected>2019 to 2020</option>
+              <option value="reference">2018 to 2019</option>
+              <option value="alphabet">2017 to 2018</option>
+              <option value="level">2016 to 2017</option>
+              
+            </select>
+          </div>
+          <div class="govuk-!-margin-left-7 govuk-!-margin-top-1">
+            <label class="govuk-label" for="sort">
+              Sort by
+            </label>
+            <select class="govuk-select" id="sortDropDown" name="sortDropDown">
+              <option value="relevance" selected>Relevance</option>
+              <option value="reference">Reference</option>
+              <option value="alphabet">Alphabetical</option>
+              <option value="level">Level</option>
+              <option value="newest">Newest</option>
+              
+            </select>
+          </div>
+          </div>
+          
+          {% include "./func.html" %}
+
+        </div>
+  
+        <p class="visually-hidden">{{ data['awarding-body-input'] }}</p> 
+        <p class="visually-hidden2">{{ data['level-input'] }}</p> 
+        
+      </div>
+    
+      {% include "./auto-js.html" %}
+
+
+{% endblock %}

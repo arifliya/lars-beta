@@ -1,0 +1,234 @@
+
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">EFA funding condition - English</h1>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+            {% include "./filters.html" %}
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          
+          <p id="resultsContainer" class="govuk-body flex space-between">
+            <span>
+              2
+              results
+            </span> 
+            <span>
+              <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+            </span>
+          </p>
+
+          <div class="filter-feedback-container">
+              
+            <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
+              <span id="firstFilter"></span> 
+              <!-- <div class="ab-group"><strong>Awarding body </strong><span class="govuk-body govuk-!-font-size-16 feedback-awarding-body"></span></div> -->
+              <!-- <div class="level-group"><strong>Level </strong><span class="govuk-body govuk-!-font-size-16 feedback-level"></span></div> -->
+            </span>
+          </div>
+
+          <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <div class="govuk-form-group flex">
+            <label class="govuk-label govuk-!-margin-top-1" for="sort">
+              Sort by
+            </label>
+            <select class="govuk-select govuk-!-margin-left-2" id="sortDropDown" name="sortDropDown">
+              <option value="relevance" selected>Relevance</option>
+              <option value="reference">Reference</option>
+              <option value="alphabet">Alphabetical</option>
+              <option value="level">Level</option>
+              <option value="newest">Newest</option>
+              
+            </select>
+          </div>
+
+          <div id="resultList" class="govuk-list">
+              
+              <search-item class="search-item">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                    	Award in English Skills - Reading (Entry 1)<span class="govuk-visually-hidden"> course name</span>
+                  </a></h3>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Reference 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          60075880
+                      </dd>
+                    </div>
+                    <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Level 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          1
+                      </dd>
+                    </div>
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Awarding body
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          None
+                      </dd>
+                      </div>
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key custom-width">
+                        Guided learning hours
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          30
+                      </dd>
+                      </div>
+                    </div>
+                  </dl>
+                  <h4 class="govuk-heading-s govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Qualification validity</h4>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                      <div class="govuk-summary-list__row govuk-!-font-size-16">
+                          <div class="mob-row">  
+                        <dt id="ldns-width" class="govuk-summary-list__key custom">
+                              Last date for new start
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Varies - see listings for details
+                          </dd>
+                          </div>
+                      </div>
+                  </dl>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">  
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              From
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                01 August 2019
+                            </dd>
+                      </div>
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              To
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                31 July 2024
+                            </dd>
+                      </div>
+                    </div>
+                    
+                  </dl>
+                  
+              </search-item>
+              <br><br>
+              <search-item class="search-item">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-!-font-weight-bold no-underline govuk-link--no-visited-state" href="overview">
+                      Award in English Skills - Reading (Entry 2)<span class="govuk-visually-hidden"> course name</span>
+                  </a></h3>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Reference 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          6007615X
+                      </dd>
+                    </div>
+                    <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Level 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          1
+                      </dd>
+                    </div>
+                    </div>
+                    <div class="govuk-summary-list__row govuk-!-font-size-16">
+                        <div class="mob-row">
+                      <dt class="govuk-summary-list__key">
+                        Awarding body
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          None
+                      </dd>
+                      </div>
+                      <div class="mob-row">
+                      <dt class="govuk-summary-list__key custom-width">
+                        Guided learning hours
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          30
+                      </dd>
+                      </div>
+                    </div>
+                  </dl>
+                  <h4 class="govuk-heading-s govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Qualification validity</h4>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                      <div class="govuk-summary-list__row govuk-!-font-size-16">
+                          <div class="mob-row">  
+                        <dt id="ldns-width" class="govuk-summary-list__key custom">
+                              Last date for new start
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Varies - see listings for details
+                          </dd>
+                          </div>
+                      </div>
+                  </dl>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-0 ">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">  
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              From
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                01 August 2019
+                            </dd>
+                      </div>
+                      <div class="mob-row">
+                          <dt class="govuk-summary-list__key custom-width">
+                              To
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                31 July 2024
+                            </dd>
+                      </div>
+                    </div>
+                    
+                  </dl>
+                  
+              </search-item>
+
+            
+              </div>
+         
+        </div>
+  
+        <div class="govuk-grid-column-one-third">
+  
+       
+  
+        </div>
+      </div>
+    
+      {% include "./auto-js.html" %}
+
+
+{% endblock %}

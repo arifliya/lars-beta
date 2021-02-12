@@ -1,0 +1,69 @@
+<script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+<!-- <link href="/public/stylesheets/accessible-autocomplete.min.css" media="all" rel="stylesheet" type="text/css" /> -->
+
+ <script type="text/javascript">
+       var subjects = [
+       'maths',
+       'psychology',
+       'engineering',
+       'AQA (Assessment and Qualifications Alliance)',
+       'functional skills qualification in mathematics',
+       'certificate in engineering',
+       'Access to HE Diploma - Science and Maths, 40010740', 
+       'Basic Skills Maths',
+       'Certificate in Education - Lifelong Learning Sector (Mathematics and Numeracy)',
+       'Diploma in Teaching Mathematics',
+       'Foundation Degree in Education and Training for Mathematics and Numeracy Specialists',
+       'BSc (Hons) in Mathematics (Year One)',
+       'Post Graduate Certificate in Education in Secondary Physics and Maths (PGCE)',
+       'DipHE in Teaching Mathematics: Numeracy',
+       'GCE A2 Level in Mathematics',
+       'Brush Up Maths Level-1 (CD-Rom)',
+       'Everyday Maths Skills - Whole Numbers',
+       'Everyday Maths Skills - Fractions and Decimals',
+       'Brush Up Maths L1',
+       'GCE A2 Level in Further Mathematics',
+       'Access to Higher Education Diploma: Maths',
+       'Access to Higher Education Diploma: Computing and Maths',
+       'Function Junction Mathematics',
+       'PGCE in Secondary Mathematics',
+       'BA (Hons) in Primary Education (Mathematics)',
+       'Additional Diploma in Teaching Mathematics',
+       'Diploma in Education and Training - Mathematics',
+       'CertED in Mathematics (Numeracy)',
+       'BSc in Secondary Education (Physics With Mathematics)',
+       'PGCE in Secondary (Mathematics)',
+       'Free-Standing Mathematics Qualification',
+       'Certificate in Mathematics',
+       'GCE AS Level in Use of Mathematics',
+       'Advanced Extension Award in Mathematics',
+       'GCE AS Level in Further Mathematics',
+       'GCSE in Additional Mathematics (Pilot)',
+       'Award in Functional Skills Mathematics (QCF)',
+       'Science with Maths',
+       'Science combined with Mathematics',
+       'Science; Technology; Engineering and Mathematics',
+       'Certificate in HL Mathematics',
+       'Pre-U Certificate in Further Mathematics',
+       'GCSE in Methods in Mathematics (Pilot)',
+       'GCSE in Mathematics - Linear'
+       ]
+ </script>
+
+
+    <script type="text/javascript">
+      element = document.querySelector('#tt-overlay')
+      id = 'autocomplete-overlay'
+      accessibleAutocomplete({
+        displayMenu: 'overlay',
+        element: element,
+        id: id,
+        source: subjects,
+        // placeholder: 'e.g Maths or 40010740',
+        showNoOptionsFound: false,
+        autoselect: true
+      })
+    </script>
+
+    
+   
