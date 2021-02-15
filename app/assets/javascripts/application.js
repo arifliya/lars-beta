@@ -84,6 +84,14 @@ $("#searchProviders").click(function() {
   if ($('#learning').val() === 'units') {
     $('#changeUrl').attr('action', "all-results-units");
   }
+
+  // if ($('input#EFAenglish').is(':checked')) {
+  //   $('#changeUrl').attr('action', "efa-funding-condition-english.html");
+  // }
+  
+  // if ($('input#EFAmaths').is(':checked')) {
+  //   $('#changeUrl').attr('action', "efa-funding-condition-maths.html");
+  // }
 });
 
 $('.autocomplete__menu').click(function(){
@@ -96,6 +104,7 @@ $("#learning").change(function(){
     $('#academicYear').show();
     $('#typeOfLearning').removeClass('flex-05');
     $('#typeOfLearning').addClass('flex-1');
+    $('.funding-conditions').show();
   }  
 });
 
@@ -104,6 +113,7 @@ $("#learning").change(function(){
     $('#academicYear').show();
     $('#typeOfLearning').removeClass('flex-05');
     $('#typeOfLearning').addClass('flex-1');
+    $('.funding-conditions').show();
   }  
 });
 
@@ -112,6 +122,7 @@ $("#learning").change(function(){
     $('#academicYear').hide();
     $('#typeOfLearning').addClass('flex-05');
     $('#typeOfLearning').removeClass('flex-1');
+    $('.funding-conditions').hide();
   }  
 });
 
@@ -120,6 +131,7 @@ $("#learning").change(function(){
     $('#academicYear').hide();
     $('#typeOfLearning').addClass('flex-05');
     $('#typeOfLearning').removeClass('flex-1');
+    $('.funding-conditions').hide();
   }  
 });
 
@@ -128,6 +140,7 @@ $("#learning").change(function(){
     $('#academicYear').hide();
     $('#typeOfLearning').addClass('flex-05');
     $('#typeOfLearning').removeClass('flex-1');
+    $('.funding-conditions').hide();
   }  
 });
 
