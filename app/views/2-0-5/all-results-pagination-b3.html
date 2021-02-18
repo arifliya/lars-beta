@@ -41,21 +41,31 @@ Qualification search results
                   </a>
                 </span>
                 
-                <span class="govuk-grid-column-two-quarters govuk-!-padding-0 text-align-centre">101 to 150 of over 5,000 results</span>
+                <span class="govuk-grid-column-two-quarters govuk-!-padding-0 text-align-centre">
+                    <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-b1.html">1 to 50</a> &nbsp; &nbsp; 
+                    <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-b2.html">51 to 100</a> &nbsp; &nbsp; 
+                      101 to 150</a>
+                    </span>
                 
                 <span class="govuk-grid-column-one-quarter govuk-!-padding-0 text-align-right">
-                  <a class="govuk-link govuk-link--no-visited-state" href="#">Next page
+                  <!-- <a class="govuk-link govuk-link--no-visited-state" href="#">Next page
                     <svg class="next-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
                       <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
                     </svg>
-                  </a>
+                  </a> -->
                 </span>
               
             </section>
 
-            <span>
-                <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
-              </span>
+            <p id="resultsContainer" class="govuk-body flex space-between">
+                <span>
+                  <span id="listCount"></span> 
+                  results
+                </span> 
+                <span>
+                  <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+                </span>
+              </p>
 
             <div class="filter-feedback-container">
               <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>

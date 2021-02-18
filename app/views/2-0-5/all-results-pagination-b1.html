@@ -41,7 +41,10 @@ Qualification search results
                   </a> -->
                 </span>
                 
-                <span class="govuk-grid-column-two-quarters govuk-!-padding-0 text-align-centre">1 to 50 of over 5,000 results</span>
+                <span class="govuk-grid-column-two-quarters govuk-!-padding-0 text-align-centre">1 to 50 &nbsp; &nbsp; 
+                  <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-b2.html">51 to 100</a> &nbsp; &nbsp; 
+                  <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-b3.html">101 to 150</a>
+                </span>
                 
                 <span class="govuk-grid-column-one-quarter govuk-!-padding-0 text-align-right">
                   <a class="govuk-link govuk-link--no-visited-state" href="all-results-pagination-b2.html">Next page
@@ -53,9 +56,15 @@ Qualification search results
               
             </section>
 
-            <span>
-                <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
-              </span>
+            <p id="resultsContainer" class="govuk-body flex space-between">
+                <span>
+                  <span id="listCount"></span> 
+                  results
+                </span> 
+                <span>
+                  <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-16" href="/public/javascripts/LARS-results-download.csv" download>Download search results</a>
+                </span>
+              </p>
 
             <div class="filter-feedback-container">
               <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
