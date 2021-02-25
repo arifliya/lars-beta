@@ -18,7 +18,7 @@ Qualification search results
         <div id="sticky" class="govuk-grid-column-one-third">
           
 
-            {% include "./filters.html" %}
+            {% include "./filters-with-feedback.html" %}
           
         </div>
         
@@ -67,16 +67,15 @@ Qualification search results
                 </span>
               </p>
 
-            <div class="filter-feedback-container">
+            <!-- <div class="filter-feedback-container">
               <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
                 <span id="firstFilter">  
-                  <!-- <span class="close"></span><span class="filter-name">test</span>   -->
                 </span> 
               </span>
             </div>
             <div class="results-number-container">
               <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
-            </div>
+            </div> -->
           <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
           <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
@@ -87,7 +86,17 @@ Qualification search results
           </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="sort">
+              <label class="govuk-label" for="sort">
+                  Academic year
+                </label>
+                <select class="govuk-select">
+                  <option value="relevance" selected>2019 to 2020</option>
+                  <option value="reference">2018 to 2019</option>
+                  <option value="alphabet">2017 to 2018</option>
+                  <option value="level">2016 to 2017</option>
+                  
+                </select>
+            <!-- <label class="govuk-label" for="sort">
               Sort by
             </label>
             <select class="govuk-select" id="sortDropDown" name="sortDropDown">
@@ -97,7 +106,7 @@ Qualification search results
               <option value="level">Level</option>
               <option value="newest">Newest</option>
               
-            </select>
+            </select> -->
           </div>
 
           <ul id="resultList" class="govuk-list">

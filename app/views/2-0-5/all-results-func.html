@@ -27,6 +27,9 @@
           
            
             <p id="resultsContainer" class="govuk-body flex space-between">
+
+              
+
               <span>
                 <span id="listCount"></span> 
                 results
@@ -36,20 +39,16 @@
               </span>
             </p>
 
-            <div class="filter-feedback-container">
-                
+            <div class="filter-feedback-container">  
               <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Showing </strong>
                 <span id="firstFilter"></span> 
-                <!-- <div class="ab-group"><strong>Awarding body </strong><span class="govuk-body govuk-!-font-size-16 feedback-awarding-body"></span></div> -->
-                <!-- <div class="level-group"><strong>Level </strong><span class="govuk-body govuk-!-font-size-16 feedback-level"></span></div> -->
               </span>
             </div>
-
-            
 
             <div class="results-number-container">
               <span id="containing" class="govuk-body govuk-!-font-size-16"><strong>Containing </strong> <a href="#" class="results-elements"> <span class="close"></span> {{ data['input-autocomplete'] }} </a> </span>
             </div>
+
           <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
           <span class="loading-spinner"><img src="/public/images/loader.gif" alt="loading-icon"></span>
