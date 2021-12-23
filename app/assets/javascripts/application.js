@@ -961,6 +961,7 @@ $('#applyTypeOfLearning').click(function(e) {
       $('#academicYear').addClass('flex-1');
       // $('#yearHome').prop('disabled', false);
       $('#academicYear').show();
+      $('.funding-conditions').show();
     }  
     if ($('#learning-no-js').val() === 'units') {
       $('#academicYear').show();
@@ -969,19 +970,23 @@ $('#applyTypeOfLearning').click(function(e) {
       $('#academicYear').addClass('flex-1');
       // $('#yearHome').prop('disabled', false);
       $('#academicYear').show();
+      $('.funding-conditions').show();
     }  
 
     if ($('#learning-no-js').val() === 'standards') {
       // $('#yearHome').prop('disabled', true);
       $('#academicYear').hide();
+      $('.funding-conditions').hide();
     }  
     if ($('#learning-no-js').val() === 't-levels') {
       // $('#yearHome').prop('disabled', true);
       $('#academicYear').hide();
+      $('.funding-conditions').hide();
     }  
     if ($('#learning-no-js').val() === 'frameworks') {
       // $('#yearHome').prop('disabled', true);
       $('#academicYear').hide();
+      $('.funding-conditions').hide();
     }  
  
     e.preventDefault();
